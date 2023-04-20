@@ -1,7 +1,8 @@
 public class Contact {
     public String name;
-    public String number;
-    public String email;
-    public String address;
+    public PhoneNumber number;
+    public Email email;
+    public Address address;
+
 
 }
