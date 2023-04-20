@@ -1,7 +1,7 @@
 public class Contact {
-    // represent a contact
-    // name field
-    // phone number field
-    // email field
-    // address field
+    public String name;
+    public String number;
+    public String email;
+    public String address;
+
 }

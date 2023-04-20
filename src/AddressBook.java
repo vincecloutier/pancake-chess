@@ -15,6 +15,15 @@ public class AddressBook {
         this.contacts.remove(contact);
     }
 
+    public Contact searchContact(String name) {
+        for (Contact contact: this.contacts) {
+            if (contact.name.equals(name)) {
+                return contact;
+            }
+        }
+        return null;
+    }
+
 
 
 
