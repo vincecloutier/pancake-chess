@@ -15,7 +15,7 @@ public class AddressBook {
         this.contacts.remove(contact);
     }
 
-    public Contact searchContact(String name) {
+    public Contact getContact(String name) {
         for (Contact contact: this.contacts) {
             if (contact.name.equals(name)) {
                 return contact;
@@ -24,17 +24,7 @@ public class AddressBook {
         return null;
     }
 
-
-
-
-
-
-
-
-
-
-
-//    public static void main(String[] args) {
-//
-//    }
+    public ArrayList<Contact> getAllContacts() {
+        return this.contacts;
+    }
 }
