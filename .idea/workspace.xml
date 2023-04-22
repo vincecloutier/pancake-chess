@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="added small classes">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="added variabels">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Email.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PhoneNumber.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +56,8 @@
       <updated>1682019035389</updated>
       <workItem from="1682019036390" duration="2968000" />
       <workItem from="1682034976130" duration="1214000" />
+      <workItem from="1682113310707" duration="37000" />
+      <workItem from="1682171991407" duration="309000" />
     </task>
     <task id="LOCAL-00001" summary="created">
       <created>1682019059929</created>
@@ -105,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682024630508</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added variabels">
+      <created>1682113341654</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1682113341654</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +139,7 @@
     <MESSAGE value="added search in address book" />
     <MESSAGE value="added a get all contacts method" />
     <MESSAGE value="added small classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="added small classes" />
+    <MESSAGE value="added variabels" />
+    <option name="LAST_COMMIT_MESSAGE" value="added variabels" />
   </component>
 </project>
