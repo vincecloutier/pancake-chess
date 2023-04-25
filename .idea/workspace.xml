@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="consolidated classes" />
+    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="xml file" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,6 +53,7 @@
       <workItem from="1682034976130" duration="1214000" />
       <workItem from="1682113310707" duration="37000" />
       <workItem from="1682171991407" duration="369000" />
+      <workItem from="1682283139807" duration="63000" />
     </task>
     <task id="LOCAL-00001" summary="created">
       <created>1682019059929</created>
@@ -117,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682172311405</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="xml file">
+      <created>1682283149872</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1682283149872</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +151,7 @@
     <MESSAGE value="added small classes" />
     <MESSAGE value="added variabels" />
     <MESSAGE value="consolidated classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="consolidated classes" />
+    <MESSAGE value="xml file" />
+    <option name="LAST_COMMIT_MESSAGE" value="xml file" />
   </component>
 </project>
