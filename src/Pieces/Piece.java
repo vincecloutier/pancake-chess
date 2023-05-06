@@ -17,7 +17,12 @@ public abstract class Piece {
 
     }
 
+    /* A function that determines if their path is valid based on Piece type.
+     @param finalX is the final X location
+     @param finalY is the final y location
+     @return a boolean indicating whether the path is valid
+     */
     public abstract boolean isValidPath (int finalX, int finalY);
 
-
+    public abstract Type getType();
 }

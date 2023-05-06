@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="see the leetcode again">
-      <change afterPath="$PROJECT_DIR$/src/Game/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pieces/Piece.java" afterDir="false" />
+    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="started piece class and setup basic file">
+      <change afterPath="$PROJECT_DIR$/src/Game/Type.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pieces/Butter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pieces/Fork.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pieces/Knife.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pieces/Pancake.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pieces/Syrup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Address.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AddressBook.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Contact.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pieces/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Piece.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +22,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -65,7 +67,7 @@
       <workItem from="1682450252281" duration="39000" />
       <workItem from="1682470242324" duration="677000" />
       <workItem from="1682621241541" duration="3205000" />
-      <workItem from="1683371177672" duration="1764000" />
+      <workItem from="1683371177672" duration="2197000" />
     </task>
     <task id="LOCAL-00001" summary="created">
       <created>1682019059929</created>
@@ -158,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682628507401</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="started piece class and setup basic file">
+      <created>1683374025176</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1683374025176</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +196,7 @@
     <MESSAGE value="xml file" />
     <MESSAGE value="see the leetcode" />
     <MESSAGE value="see the leetcode again" />
-    <option name="LAST_COMMIT_MESSAGE" value="see the leetcode again" />
+    <MESSAGE value="started piece class and setup basic file" />
+    <option name="LAST_COMMIT_MESSAGE" value="started piece class and setup basic file" />
   </component>
 </project>
