@@ -1,5 +1,5 @@
 package Game;
 
 public enum Type {
-    PANCAKE, SYRUP, BUTTER, FORK, KNIFE
+    PANCAKE, PAWN, KNIGHT, BISHOP, ROOK, QUEEN, KING
 }
