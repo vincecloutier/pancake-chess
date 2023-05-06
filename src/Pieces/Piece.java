@@ -8,7 +8,7 @@ public abstract class Piece {
     /* Constructor for a Piece
      @param x is the x location of the Piece
      @param y is the y location of the Piece
-     @param player is the PLayer object associated with the Piece
+     @param player is the Player object associated with the Piece
      */
     public Piece (int x, int y, Player player) {
         this.x = x;
