@@ -1,8 +1,5 @@
 package Game;
 
-/**
- * Created by Anne on 9/11/2014.
- */
 public class Game {
 
     public Board gameBoard;

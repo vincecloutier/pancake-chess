@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="added constructors for board code">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Board.java" afterDir="false" />
+    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="added player info to pass in">
       <change beforePath="$PROJECT_DIR$/src/Game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +196,28 @@
       <option name="project" value="LOCAL" />
       <updated>1683553114376</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="currently setting the pieces on the board">
+      <created>1683553291022</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1683553291022</updated>
+    </task>
+    <task id="LOCAL-00021" summary="currently creating a new game">
+      <created>1683553301667</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1683553301667</updated>
+    </task>
+    <task id="LOCAL-00022" summary="added player info to pass in">
+      <created>1683553310594</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1683553310594</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +252,9 @@
     <MESSAGE value="started some of the pieces" />
     <MESSAGE value="started board" />
     <MESSAGE value="added constructors for board code" />
-    <option name="LAST_COMMIT_MESSAGE" value="added constructors for board code" />
+    <MESSAGE value="currently setting the pieces on the board" />
+    <MESSAGE value="currently creating a new game" />
+    <MESSAGE value="added player info to pass in" />
+    <option name="LAST_COMMIT_MESSAGE" value="added player info to pass in" />
   </component>
 </project>
