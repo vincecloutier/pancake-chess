@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="started some of the pieces">
+    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="added constructors for board code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +185,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683376884136</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="started board">
+      <created>1683550772486</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1683550772486</updated>
+    </task>
+    <task id="LOCAL-00019" summary="added constructors for board code">
+      <created>1683553114376</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1683553114376</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +232,8 @@
     <MESSAGE value="created all the piece classes" />
     <MESSAGE value="shifting to modified chess" />
     <MESSAGE value="started some of the pieces" />
-    <option name="LAST_COMMIT_MESSAGE" value="started some of the pieces" />
+    <MESSAGE value="started board" />
+    <MESSAGE value="added constructors for board code" />
+    <option name="LAST_COMMIT_MESSAGE" value="added constructors for board code" />
   </component>
 </project>
