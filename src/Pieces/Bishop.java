@@ -2,6 +2,7 @@ package Pieces;
 import Game.*;
 
 public class Bishop extends Piece {
+
     Type type;
 
     // the constructor for a bishop
@@ -10,14 +11,14 @@ public class Bishop extends Piece {
         type = Type.BISHOP;
     }
 
-    // check if the bishop is moving diagonally
+    // a function that checks if the bishop is moving diagonally
     public boolean isValidPath (int finalX, int finalY) {
         int xDistance = Math.abs(finalX - this.x);
         int yDistance = Math.abs(finalY - this.y);
         return xDistance == yDistance;
     }
 
-    // a function that returns the path from one point to another based on the piece type
+    // a function that returns a diagonal path from one point to another
     public int[][] getPath (int startX, int startY, int finalX, int finalY) {
 
         // length of path

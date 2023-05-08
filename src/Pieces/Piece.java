@@ -1,15 +1,12 @@
 package Pieces;
 import Game.*;
-// Created by Vince Cloutier on May 6, 2023.
+
 public abstract class Piece {
+
     public int x, y;
     public Player player;
 
-    /* Constructor for a Piece
-     @param x is the x location of the Piece
-     @param y is the y location of the Piece
-     @param player is the Player object associated with the Piece
-     */
+    // the constructor for a piece
     public Piece (int x, int y, Player player) {
         this.x = x;
         this.y = y;
@@ -17,12 +14,12 @@ public abstract class Piece {
 
     }
 
-    /* A function that determines if their path is valid based on Piece type.
-     @param finalX is the final X location
-     @param finalY is the final y location
-     @return a boolean indicating whether the path is valid
-     */
+    // a function that determines if a path is valid based on piece type
     public abstract boolean isValidPath (int finalX, int finalY);
 
+    // a function that returns a path from one point to another based on piece type
+    public abstract int[][] getPath(int startX, int startY, int finalX, int finalY);
+
+    // a function that gets the piece type
     public abstract Type getType();
 }
