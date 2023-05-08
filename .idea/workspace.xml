@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="added player info to pass in">
-      <change beforePath="$PROJECT_DIR$/src/Game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Game.java" afterDir="false" />
+    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="fixed copyright">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pieces/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Bishop.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +63,7 @@
       <workItem from="1682621241541" duration="3205000" />
       <workItem from="1683371177672" duration="3610000" />
       <workItem from="1683376422650" duration="3023000" />
+      <workItem from="1683556895511" duration="724000" />
     </task>
     <task id="LOCAL-00001" summary="created">
       <created>1682019059929</created>
@@ -217,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683553310594</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="fixed copyright">
+      <created>1683553394885</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1683553394885</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,6 +264,7 @@
     <MESSAGE value="currently setting the pieces on the board" />
     <MESSAGE value="currently creating a new game" />
     <MESSAGE value="added player info to pass in" />
-    <option name="LAST_COMMIT_MESSAGE" value="added player info to pass in" />
+    <MESSAGE value="fixed copyright" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed copyright" />
   </component>
 </project>
