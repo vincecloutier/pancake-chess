@@ -1,27 +1,33 @@
 package Pieces;
 import Game.*;
-// Created by Vince Cloutier on May 6, 2023.
+
 public class King extends Piece {
+
     Type type;
 
-    /* Constructor for a King
-    @param x is the x location of the King
-    @param y is the y location of the King
-    @param player is the Player object associated with the King
-    */
+    // the constructor for a king
     public King (int x, int y, Player player) {
         super(x, y, player);
         type = Type.KING;
     }
 
-    /* A function that determines if the King is moving into danger.
-     @param finalX is the final X location
-     @param finalY is the final y location
-     @return a boolean indicating whether the path is valid
-     */
-    public boolean isValidPath(int finalX, int finalY) {
-        return false;
+    // a function that checks if the king is moving only one square
+    public boolean isValidPath (int finalX, int finalY) {
+        int xDistance = Math.abs(finalX - this.x);
+        int yDistance = Math.abs(finalY - this.y);
+        return xDistance == yDistance;
     }
 
+    // TODO ADD CHECK / CHECKMATE CHECKER HERE
+    // TODO INTEGRATE THIS CHECKER INTO ISVALIDPATH
+
+    // a function that returns a path from one point to another
+    public int[][] getPath (int startX, int startY, int finalX, int finalY) {
+        // note that kings will never have a path
+        int length = 0;
+        return new int[2][length];
+    }
+
+    // a function that gets the piece type
     public Type getType() {return Type.KING;}
 }
