@@ -14,7 +14,4 @@ public class King extends Piece {
         return xDistance == yDistance;
     }
 
-    // TODO ADD CHECK / CHECKMATE CHECKER HERE
-    // TODO INTEGRATE THIS CHECKER INTO ISVALIDPATH
-
 }
