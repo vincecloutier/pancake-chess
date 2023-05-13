@@ -7,34 +7,34 @@ public class Game {
     private boolean aiTurn;
 
     public Game() {
-        board = new Piece[8][8]; // standard chess board size
-        aiTurn = false; // let's say the player moves first
+        board = new Piece[8][8];
+        aiTurn = false;
 
         // Initialize player's pieces
         for (int i = 0; i < 8; i++) {
-            board[1][i] = new Pawn(1, i, false); // Pawns
+            board[1][i] = new Pawn(1, i, false);
         }
-        board[0][0] = new Rook(0, 0, false); // Rooks
+        board[0][0] = new Rook(0, 0, false);
         board[0][7] = new Rook(0, 7, false);
-        board[0][1] = new Knight(0, 1, false); // Knights
+        board[0][1] = new Knight(0, 1, false);
         board[0][6] = new Knight(0, 6, false);
-        board[0][2] = new Bishop(0, 2, false); // Bishops
+        board[0][2] = new Bishop(0, 2, false);
         board[0][5] = new Bishop(0, 5, false);
-        board[0][3] = new Queen(0, 3, false); // Queen
-        board[0][4] = new King(0, 4, false); // King
+        board[0][3] = new Queen(0, 3, false);
+        board[0][4] = new King(0, 4, false);
 
         // Initialize AI's pieces
         for (int i = 0; i < 8; i++) {
-            board[6][i] = new Pawn(6, i, true); // Pawns
+            board[6][i] = new Pawn(6, i, true);
         }
-        board[7][0] = new Rook(7, 0, true); // Rooks
+        board[7][0] = new Rook(7, 0, true);
         board[7][7] = new Rook(7, 7, true);
-        board[7][1] = new Knight(7, 1, true); // Knights
+        board[7][1] = new Knight(7, 1, true);
         board[7][6] = new Knight(7, 6, true);
-        board[7][2] = new Bishop(7, 2, true); // Bishops
+        board[7][2] = new Bishop(7, 2, true);
         board[7][5] = new Bishop(7, 5, true);
-        board[7][3] = new Queen(7, 3, true); // Queen
-        board[7][4] = new King(7, 4, true); // King
+        board[7][3] = new Queen(7, 3, true);
+        board[7][4] = new King(7, 4, true);
     }
 
     public void playGame() {
@@ -44,8 +44,33 @@ public class Game {
             printBoard();
 
             if (aiTurn) {
-                // AI logic here
-                // ... left out for brevity
+                // BRUTE FORCE LOGIC -> EVENTUALLY DO REAL AI
+                boolean moveMade = false;
+
+                outerloop:
+                for (int startX = 0; startX < 8; startX++) {
+                    for (int startY = 0; startY < 8; startY++) {
+                        Piece piece = board[startX][startY];
+
+                        if (piece != null && piece.isAI) {
+                            for (int endX = 0; endX < 8; endX++) {
+                                for (int endY = 0; endY < 8; endY++) {
+                                    if (isValidMove(startX, startY, endX, endY)) {
+                                        movePiece(startX, startY, endX, endY);
+                                        moveMade = true;
+                                        break outerloop;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                if (!moveMade) {
+                    System.out.println("AI cannot make a move, player wins!");
+                    break;
+                }
+                aiTurn = !aiTurn;
+
 
             } else {
                 System.out.println("Enter your move (startX startY endX endY): ");
