@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="fixed some comments">
-      <change beforePath="$PROJECT_DIR$/src/Pieces/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/King.java" afterDir="false" />
+    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="started king">
+      <change afterPath="$PROJECT_DIR$/src/Game/CLIGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +42,9 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor.code.editing&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -62,7 +67,12 @@
       <workItem from="1682621241541" duration="3205000" />
       <workItem from="1683371177672" duration="3610000" />
       <workItem from="1683376422650" duration="3023000" />
-      <workItem from="1683556895511" duration="1203000" />
+      <workItem from="1683556895511" duration="1306000" />
+      <workItem from="1683631488251" duration="379000" />
+      <workItem from="1683638931000" duration="1000" />
+      <workItem from="1683638967966" duration="30000" />
+      <workItem from="1683983943019" duration="309000" />
+      <workItem from="1683984566656" duration="211000" />
     </task>
     <task id="LOCAL-00001" summary="created">
       <created>1682019059929</created>
@@ -239,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683557897804</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="started king">
+      <created>1683558195341</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1683558195341</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,6 +297,7 @@
     <MESSAGE value="fixed copyright" />
     <MESSAGE value="finished bishop function" />
     <MESSAGE value="fixed some comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed some comments" />
+    <MESSAGE value="started king" />
+    <option name="LAST_COMMIT_MESSAGE" value="started king" />
   </component>
 </project>
