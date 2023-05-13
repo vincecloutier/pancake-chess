@@ -14,5 +14,8 @@ public class Bishop extends Piece {
         return xDistance == yDistance;
     }
 
-
+    @Override
+    public String toString() {
+        return "B";
+    }
 }
