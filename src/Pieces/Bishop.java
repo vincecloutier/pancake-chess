@@ -3,8 +3,8 @@ package Pieces;
 public class Bishop extends Piece {
 
 
-    public Bishop(int x, int y) {
-        super(x, y);
+    public Bishop(int x, int y, boolean isAi) {
+        super(x, y, isAi);
     }
 
     // a function that checks if the bishop is moving diagonally
@@ -16,6 +16,10 @@ public class Bishop extends Piece {
 
     @Override
     public String toString() {
-        return "B";
+        if (isAI) {
+            return "b";
+        } else {
+            return "B";
+        }
     }
 }

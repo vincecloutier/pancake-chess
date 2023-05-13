@@ -5,8 +5,8 @@ package Pieces;
 public class Rook extends Piece {
 
 
-    public Rook(int x, int y) {
-        super(x, y);
+    public Rook(int x, int y, boolean isAi) {
+        super(x, y, isAi);
     }
 
     public boolean isValidPath(int finalX, int finalY) {

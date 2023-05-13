@@ -4,9 +4,6 @@ import java.util.ArrayList;
 
 public class Game {
 
-    private static ArrayList<Piece> whitePieces;
-    private static ArrayList<Piece> blackPieces;
-
     public static void main(String[] args) {
 
         createPieces();
@@ -35,16 +32,34 @@ public class Game {
 
     private static void createPieces() {
 
+        ArrayList<Piece> humanPieces = new ArrayList<>();
+        ArrayList<Piece> aiPieces = new ArrayList<>();
+
         // Place pawns
         for (int i = 0; i < 8; i++) {
-            whitePieces.add(new Pawn(i, 1));
-            blackPieces.add(new Pawn(i, 6));
+            humanPieces.add(new Pawn(i, 1, false));
+            aiPieces.add(new Pawn(i, 6, true));
         }
 
-        // Place white pieces
+        // Place human pieces
+        humanPieces.add(new Rook(0, 0, false));
+        humanPieces.add(new Knight(1, 0, false));
+        humanPieces.add(new Bishop(2, 0, false));
+        humanPieces.add(new Queen(3, 0, false));
+        humanPieces.add(new King(4, 0, false));
+        humanPieces.add(new Bishop(5, 0, false));
+        humanPieces.add(new Knight(6, 0, false));
+        humanPieces.add(new Rook(7, 0, false));
 
-
-        // Place black pieces
+        // Place ai pieces
+        aiPieces.add(new Rook(0, 7, true));
+        aiPieces.add(new Knight(1, 7, true));
+        aiPieces.add(new Bishop(2, 7, true));
+        aiPieces.add(new Queen(3, 7, true));
+        aiPieces.add(new King(4, 7, true));
+        aiPieces.add(new Bishop(5, 7, true));
+        aiPieces.add(new Knight(6, 7, true));
+        aiPieces.add(new Rook(7, 7, true));
 
     }
 
