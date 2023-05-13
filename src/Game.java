@@ -7,24 +7,26 @@ public class Game {
     public static void main(String[] args) {
 
         createPieces();
-        boolean whiteTurn = true;
-
+        boolean humanTurn = true;
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
             printBoard();
 
-            String player = whiteTurn ? "White" : "Black";
-            System.out.println(player + "'s turn. Enter move (e.g. e2 e4): ");
-            String move = scanner.nextLine();
-
-            if (move.equalsIgnoreCase("quit")) {
-                System.out.println("Game over. Quitting...");
-                break;
+            if (humanTurn) {
+                System.out.println("Enter move (e.g. e2 e4): ");
+                String move = scanner.nextLine();
+                if (move.equalsIgnoreCase("quit")) {
+                    System.out.println("Quitting...");
+                    break;
+                }
+                updateGame(move);
+            } else {
+                makeMove();
             }
 
-            makeMove(move);
-            whiteTurn = !whiteTurn;
+
+            humanTurn = !humanTurn;
         }
 
         scanner.close();
@@ -67,8 +69,11 @@ public class Game {
 
     }
 
+    private static void makeMove() {
 
-    private static void makeMove(String move) {
+    }
+
+    private static void updateGame(String move) {
 
     }
 
