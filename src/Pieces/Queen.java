@@ -9,7 +9,15 @@ public class Queen extends Piece {
     }
 
     public boolean isValidPath(int finalX, int finalY) {
-        return false;
+        return true;
     }
 
+    @Override
+    public String toString() {
+        if (isAI) {
+            return "q";
+        } else {
+            return "Q";
+        }
+    }
 }

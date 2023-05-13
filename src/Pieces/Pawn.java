@@ -8,7 +8,15 @@ public class Pawn extends Piece {
     }
 
     public boolean isValidPath(int finalX, int finalY) {
-        return false;
+        return true;
     }
 
+    @Override
+    public String toString() {
+        if (isAI) {
+            return "p";
+        } else {
+            return "P";
+        }
+    }
 }

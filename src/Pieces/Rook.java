@@ -10,7 +10,16 @@ public class Rook extends Piece {
     }
 
     public boolean isValidPath(int finalX, int finalY) {
-        return false;
+        return true;
     }
 
+
+    @Override
+    public String toString() {
+        if (isAI) {
+            return "r";
+        } else {
+            return "R";
+        }
+    }
 }

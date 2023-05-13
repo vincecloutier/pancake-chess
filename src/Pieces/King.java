@@ -13,4 +13,12 @@ public class King extends Piece {
         return xDistance == yDistance;
     }
 
+    @Override
+    public String toString() {
+        if (isAI) {
+            return "k";
+        } else {
+            return "K";
+        }
+    }
 }

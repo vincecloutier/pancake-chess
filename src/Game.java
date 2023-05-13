@@ -1,81 +1,103 @@
+package Chess;
+
 import Pieces.*;
-import java.util.Scanner;
-import java.util.ArrayList;
 
 public class Game {
+    private Piece[][] board;
+    private boolean aiTurn;
 
-    public static void main(String[] args) {
+    public Game() {
+        board = new Piece[8][8]; // standard chess board size
+        aiTurn = false; // let's say the player moves first
 
-        createPieces();
-        boolean humanTurn = true;
-        Scanner scanner = new Scanner(System.in);
+        // Initialize player's pieces
+        for (int i = 0; i < 8; i++) {
+            board[1][i] = new Pawn(1, i, false); // Pawns
+        }
+        board[0][0] = new Rook(0, 0, false); // Rooks
+        board[0][7] = new Rook(0, 7, false);
+        board[0][1] = new Knight(0, 1, false); // Knights
+        board[0][6] = new Knight(0, 6, false);
+        board[0][2] = new Bishop(0, 2, false); // Bishops
+        board[0][5] = new Bishop(0, 5, false);
+        board[0][3] = new Queen(0, 3, false); // Queen
+        board[0][4] = new King(0, 4, false); // King
+
+        // Initialize AI's pieces
+        for (int i = 0; i < 8; i++) {
+            board[6][i] = new Pawn(6, i, true); // Pawns
+        }
+        board[7][0] = new Rook(7, 0, true); // Rooks
+        board[7][7] = new Rook(7, 7, true);
+        board[7][1] = new Knight(7, 1, true); // Knights
+        board[7][6] = new Knight(7, 6, true);
+        board[7][2] = new Bishop(7, 2, true); // Bishops
+        board[7][5] = new Bishop(7, 5, true);
+        board[7][3] = new Queen(7, 3, true); // Queen
+        board[7][4] = new King(7, 4, true); // King
+    }
+
+    public void playGame() {
+        java.util.Scanner scanner = new java.util.Scanner(System.in);
 
         while (true) {
             printBoard();
 
-            if (humanTurn) {
-                System.out.println("Enter move (e.g. e2 e4): ");
-                String move = scanner.nextLine();
-                if (move.equalsIgnoreCase("quit")) {
-                    System.out.println("Quitting...");
-                    break;
-                }
-                updateGame(move);
+            if (aiTurn) {
+                // AI logic here
+                // ... left out for brevity
+
             } else {
-                makeMove();
+                System.out.println("Enter your move (startX startY endX endY): ");
+
+                int startX = scanner.nextInt();
+                int startY = scanner.nextInt();
+                int endX = scanner.nextInt();
+                int endY = scanner.nextInt();
+
+                if (isValidMove(startX, startY, endX, endY)) {
+                    movePiece(startX, startY, endX, endY);
+                    aiTurn = !aiTurn;
+                } else {
+                    System.out.println("Invalid move! Try again.");
+                }
             }
-
-
-            humanTurn = !humanTurn;
         }
-
-        scanner.close();
     }
 
-    private static void createPieces() {
-
-        ArrayList<Piece> humanPieces = new ArrayList<>();
-        ArrayList<Piece> aiPieces = new ArrayList<>();
-
-        // Place pawns
+    private void printBoard() {
         for (int i = 0; i < 8; i++) {
-            humanPieces.add(new Pawn(i, 1, false));
-            aiPieces.add(new Pawn(i, 6, true));
+            for (int j = 0; j < 8; j++) {
+                Piece piece = board[i][j];
+                if (piece == null) {
+                    System.out.print("-");
+                } else {
+                    System.out.print(piece);
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    private boolean isValidMove(int startX, int startY, int endX, int endY) {
+        Piece piece = board[startX][startY];
+        if (piece == null || piece.isAI == aiTurn) {
+            return false;
         }
 
-        // Place human pieces
-        humanPieces.add(new Rook(0, 0, false));
-        humanPieces.add(new Knight(1, 0, false));
-        humanPieces.add(new Bishop(2, 0, false));
-        humanPieces.add(new Queen(3, 0, false));
-        humanPieces.add(new King(4, 0, false));
-        humanPieces.add(new Bishop(5, 0, false));
-        humanPieces.add(new Knight(6, 0, false));
-        humanPieces.add(new Rook(7, 0, false));
-
-        // Place ai pieces
-        aiPieces.add(new Rook(0, 7, true));
-        aiPieces.add(new Knight(1, 7, true));
-        aiPieces.add(new Bishop(2, 7, true));
-        aiPieces.add(new Queen(3, 7, true));
-        aiPieces.add(new King(4, 7, true));
-        aiPieces.add(new Bishop(5, 7, true));
-        aiPieces.add(new Knight(6, 7, true));
-        aiPieces.add(new Rook(7, 7, true));
-
+        return piece.isValidPath(endX, endY);
     }
 
-    private static void printBoard() {
-
+    private void movePiece(int startX, int startY, int endX, int endY) {
+        Piece piece = board[startX][startY];
+        board[startX][startY] = null;
+        board[endX][endY] = piece;
+        piece.x = endX;
+        piece.y = endY;
     }
 
-    private static void makeMove() {
-
+    public static void main(String[] args) {
+        Game game = new Game();
+        game.playGame();
     }
-
-    private static void updateGame(String move) {
-
-    }
-
 }
-

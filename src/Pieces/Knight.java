@@ -7,7 +7,15 @@ public class Knight extends Piece {
         super(x, y, isAi);
     }
     public boolean isValidPath(int finalX, int finalY) {
-        return false;
+        return true;
     }
 
+    @Override
+    public String toString() {
+        if (isAI) {
+            return "n";
+        } else {
+            return "N";
+        }
+    }
 }
