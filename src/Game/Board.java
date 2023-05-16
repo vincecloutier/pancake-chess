@@ -27,10 +27,10 @@ public class Board {
      */
     public void setPieces() {
 
-        // Pawns
+        // Pancakes
         for(int i = 0; i < 8; i++) {
-            new Pawn(i, 6, this.game.player1);
-            new Pawn(i, 1, this.game.player2);
+            new Pancake(i, 6, this.game.player1);
+            new Pancake(i, 1, this.game.player2);
         }
 
         // Player 1's Named Pieces

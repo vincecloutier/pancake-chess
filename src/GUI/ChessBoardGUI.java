@@ -137,23 +137,23 @@ public class ChessBoardGUI {
 
 
                         if (row == 1) {
-                            Image blackPawn = null;
+                            Image blackPancake = null;
                             try {
-                                blackPawn = ImageIO.read(Objects.requireNonNull(getClass().getResource("Assets/blackPawn.png")));
+                                blackPancake = ImageIO.read(Objects.requireNonNull(getClass().getResource("Assets/blackPancake.png")));
                             } catch (IOException ignored) {
                             }
-                            assert blackPawn != null;
-                            button.setIcon(new ImageIcon(blackPawn));
+                            assert blackPancake != null;
+                            button.setIcon(new ImageIcon(blackPancake));
                         }
 
                         if (row == 6) {
-                            Image whitePawn = null;
+                            Image whitePancake = null;
                             try {
-                                whitePawn = ImageIO.read(Objects.requireNonNull(getClass().getResource("Assets/whitePawn.png")));
+                                whitePancake = ImageIO.read(Objects.requireNonNull(getClass().getResource("Assets/whitePancake.png")));
                             } catch (IOException ignored) {
                             }
-                            assert whitePawn != null;
-                            button.setIcon(new ImageIcon(whitePawn));
+                            assert whitePancake != null;
+                            button.setIcon(new ImageIcon(whitePancake));
                         }
 
                         if (row == 0 && (col == 0 || col == 7)) {

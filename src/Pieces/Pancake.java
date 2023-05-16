@@ -1,15 +1,15 @@
 package Pieces;
 import Game.Player;
 
-public class Pawn extends Piece {
+public class Pancake extends Piece {
 
     /**
-     * The constructor for a Pawn.
-     * @param x the Pawn's X location
-     * @param y the Pawn's Y location
-     * @param player the Pawn's associated player
+     * The constructor for a Pancake.
+     * @param x the Pancake's X location
+     * @param y the Pancake's Y location
+     * @param player the Pancake's associated player
      */
-    public Pawn (int x, int y, Player player) {super(x, y, player);}
+    public Pancake (int x, int y, Player player) {super(x, y, player);}
 
     /**
      * A function that determines whether the Pancake is trying to capture or not.

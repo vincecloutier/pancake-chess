@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="simplified setting pieces">
+    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="removed type stuff for instanceof resolves #8">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Assets/blackPawn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Assets/blackPancake.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Assets/whitePawn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Assets/whitePancake.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/ChessBoardGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/ChessBoardGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Type.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pieces/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Bishop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pieces/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/King.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pieces/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Knight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Pawn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pieces/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Piece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pieces/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Queen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pieces/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Rook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Pancake.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,14 +93,7 @@
       <workItem from="1683983943019" duration="309000" />
       <workItem from="1683984566656" duration="211000" />
       <workItem from="1683984879535" duration="4211000" />
-      <workItem from="1684240062754" duration="8928000" />
-    </task>
-    <task id="LOCAL-00004" summary="added search in address book">
-      <created>1682020748706</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1682020748706</updated>
+      <workItem from="1684240062754" duration="9192000" />
     </task>
     <task id="LOCAL-00005" summary="added search in address book">
       <created>1682020758769</created>
@@ -442,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684248336029</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="removed type stuff for instanceof resolves #8">
+      <created>1684249043515</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1684249043515</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,7 +456,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="started king" />
     <MESSAGE value="moving to cli for now" />
     <MESSAGE value="starting pieces from scratch" />
     <MESSAGE value="editing king" />
@@ -485,6 +480,7 @@
     <MESSAGE value="added error handlers and cleaned up stuff, still alot to do here" />
     <MESSAGE value="removed unneeded location" />
     <MESSAGE value="simplified setting pieces" />
-    <option name="LAST_COMMIT_MESSAGE" value="simplified setting pieces" />
+    <MESSAGE value="removed type stuff for instanceof resolves #8" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed type stuff for instanceof resolves #8" />
   </component>
 </project>
