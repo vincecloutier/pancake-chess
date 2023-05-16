@@ -15,8 +15,7 @@ public class Queen extends Piece {
      * @param y the Queen's Y location
      * @param player the Queen's associated player
      */
-    public Queen(int x, int y, Player player)
-    {
+    public Queen(int x, int y, Player player) {
         super(x, y, player);
         type = Type.QUEEN;
     }
@@ -36,15 +35,11 @@ public class Queen extends Piece {
      * @param finalY the final Y location
      * @return a boolean indicating whether the path is valid
      */
-    public boolean isValidPath(int finalX, int finalY)
-    {
+    public boolean isValidPath(int finalX, int finalY) {
         int x_diff = Math.abs(finalX - this.x);
         int y_diff = Math.abs(finalY - this.y);
 
-        if((x_diff == y_diff) || (finalX == this.x) || (finalY == this.y))
-            return true;
-
-        return false;
+        return (x_diff == y_diff) || (finalX == this.x) || (finalY == this.y);
     }
 
     /**
@@ -55,8 +50,7 @@ public class Queen extends Piece {
      * @param finalY the final Y location
      * @return an array of coordinates of the given path
      */
-    public int [][] drawPath(int startX, int startY, int finalX, int finalY)
-    {
+    public int [][] drawPath(int startX, int startY, int finalX, int finalY) {
         int pairs;
         int x_dir = 0, y_dir = 0;
 
@@ -93,16 +87,12 @@ public class Queen extends Piece {
 
         int [][] path = new int[2][pairs];
 
-        if(pairs - 1 > 0)
-        {
-            for(int i = 0; i < pairs - 1; i++)
-            {
+        if(pairs - 1 > 0) {
+            for(int i = 0; i < pairs - 1; i++) {
                 path[0][i] = startX + x_dir;
                 path[1][i] = startY + y_dir;
             }
         }
-
-
         return path;
     }
 }

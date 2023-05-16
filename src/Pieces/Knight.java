@@ -15,8 +15,7 @@ public class Knight extends Piece {
      * @param y the Knight's Y location
      * @param player the Knight's associated player
      */
-    public Knight(int x, int y, Player player)
-    {
+    public Knight(int x, int y, Player player) {
         super(x, y, player);
         type = Type.KNIGHT;
     }
@@ -36,15 +35,11 @@ public class Knight extends Piece {
      * @param finalY the final Y location
      * @return a boolean indicating whether the path is valid
      */
-    public boolean isValidPath(int finalX, int finalY)
-    {
+    public boolean isValidPath(int finalX, int finalY) {
         int x_diff = Math.abs(finalX - this.x);
         int y_diff = Math.abs(finalY - this.y);
 
-        if((x_diff == 1 && y_diff == 2) || (x_diff == 2 && y_diff == 1))
-            return true;
-
-        return false;
+        return (x_diff == 1 && y_diff == 2) || (x_diff == 2 && y_diff == 1);
     }
 
     /**
@@ -55,9 +50,8 @@ public class Knight extends Piece {
      * @param finalY the final Y location
      * @return an array of coordinates of the given path
      */
-    public int [][] drawPath(int startX, int startY, int finalX, int finalY)
-    {
-        int pairs = 0; //knights can leap, so a path is not necessary
+    public int [][] drawPath(int startX, int startY, int finalX, int finalY) {
+        int pairs = 0; // knights can leap, so a path is not necessary
         int [][] path = new int[2][pairs];
 
         return path;

@@ -16,7 +16,7 @@ public class Pawn extends Piece {
      * @param y the Pawn's Y location
      * @param player the Pawn's associated player
      */
-    public Pawn(int x, int y, Player player) {
+    public Pawn (int x, int y, Player player) {
         super(x, y, player);
         type = Type.PAWN;
     }
@@ -36,25 +36,18 @@ public class Pawn extends Piece {
      * @param finalY the final Y location
      * @return a boolean indicating whether the path is valid
      */
-    public boolean isValidPath(int finalX, int finalY)
-    {
+    public boolean isValidPath(int finalX, int finalY) {
         //checks if it is the player's first turn, and if there are no units along the path
         //if so, it will let the pawn move two spaces forward
         if(pawnCanMoveTwo(finalX, finalY))
             return true;
 
-            //checks if pawn is moving on a diagonal, if it is moving only one space, and if there is an enemy in that space
+        //checks if pawn is moving on a diagonal, if it is moving only one space, and if there is an enemy in that space
         if(pawnCanCapture(finalX, finalY))
             return true;
 
-            //checks if pawn is moving one space forward, does not let it move forward unless space is empty
-        if(pawnCanMoveForward(finalX, finalY))
-            return true;
-
-        else
-        {
-            return false;
-        }
+        //checks if pawn is moving one space forward, does not let it move forward unless space is empty
+        return pawnCanMoveForward(finalX, finalY);
     }
 
     /**
@@ -68,17 +61,11 @@ public class Pawn extends Piece {
         int abs_Y_diff = Math.abs(finalY - this.y);
         Piece[][] board = this.player.myGame.gameBoard.boardArray;
 
-        if((abs_Y_diff == 2)
-                &&(this.player.myGame.turn == 1 || this.player.myGame.turn == 2)
-                &&(board[finalX][finalY] == null)
-                &&((this.player.playerColor == Color.WHITE && board[this.x][this.y - 1] == null)
-                    ||(this.player.playerColor == Color.BLACK && board[this.x][this.y + 1] == null)))
-        {
-            return true;
-        }
-
-        else
-            return false;
+        return (abs_Y_diff == 2)
+                && (this.player.myGame.turn == 1 || this.player.myGame.turn == 2)
+                && (board[finalX][finalY] == null)
+                && ((this.player.playerColor == Color.WHITE && board[this.x][this.y - 1] == null)
+                || (this.player.playerColor == Color.BLACK && board[this.x][this.y + 1] == null));
     }
 
     /**
@@ -100,9 +87,8 @@ public class Pawn extends Piece {
                     && board[finalX][finalY].player.playerColor == Color.BLACK)) && Y_diff < 0)
                 return true;
 
-            if(this.player.playerColor == Color.BLACK && ((board[finalX][finalY] != null
-                    && board[finalX][finalY].player.playerColor == Color.WHITE)) && Y_diff > 0)
-                return true;
+            return this.player.playerColor == Color.BLACK && ((board[finalX][finalY] != null
+                    && board[finalX][finalY].player.playerColor == Color.WHITE)) && Y_diff > 0;
         }
 
         return false;
@@ -122,14 +108,9 @@ public class Pawn extends Piece {
         int Y_diff = finalY - this.y;
         Piece[][] board = this.player.myGame.gameBoard.boardArray;
 
-        if(((this.player.playerColor == Color.WHITE && Y_diff < 0 && abs_Y_diff == 1 ) ||
+        return ((this.player.playerColor == Color.WHITE && Y_diff < 0 && abs_Y_diff == 1) ||
                 (this.player.playerColor == Color.BLACK && Y_diff > 0 && abs_Y_diff == 1)) &&
-                board[finalX][finalY] == null && this.x == finalX)
-        {
-            return true;
-        }
-
-        return false;
+                board[finalX][finalY] == null && this.x == finalX;
     }
 
     /**
@@ -140,11 +121,7 @@ public class Pawn extends Piece {
      * @param finalY the final Y location
      * @return an array of coordinates of the given path
      */
-    public int[][] drawPath(int startX, int startY, int finalX, int finalY)
-    {
-        int pairs = 0;
-        int[][] path = new int[2][pairs];
-
-        return path;
+    public int[][] drawPath(int startX, int startY, int finalX, int finalY) {
+        return new int[2][0]; // since Pancakes can go anywhere, a path is unnecessary
     }
 }
