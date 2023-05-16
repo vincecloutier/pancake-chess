@@ -1,11 +1,8 @@
 package Game;
-import Exceptions.InvalidMovementException;
 import Pieces.*;
 import java.util.Vector;
 
-/**
- * Created by Anne on 9/11/2014.
- */
+
 public class Board {
 
     public Piece[][] boardArray;
@@ -77,12 +74,8 @@ public class Board {
             }
             setNewPieceLocation(piece, finalX, finalY);
         } else {
-            try {
-                throw new InvalidMovementException();
-            } catch (InvalidMovementException e) {
-                e.printStackTrace();
-                game.invalid = true;
-            }
+            System.out.println("Invalid movement!");
+            game.invalid = true;
         }
     }
 
@@ -100,7 +93,9 @@ public class Board {
     public boolean isValidMove(Piece piece, int finalX, int finalY) {
         // TODO: Make it so that pieces can't move if the king is in check
         int [][] path = piece.drawPath(piece.x, piece.y, finalX, finalY);
-        return isWithinBounds(finalX, finalY) && (validLeaping(piece, path)) && (isNotOrigin(piece, finalX, finalY))
+        return isWithinBounds(finalX, finalY)
+                && (validLeaping(piece, path))
+                && (isNotOrigin(piece, finalX, finalY))
                 && (isValidEndPoint(piece, finalX, finalY));
     }
 

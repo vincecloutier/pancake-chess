@@ -10,7 +10,7 @@ public class Player {
     public Color playerColor;
     public boolean goesFirst;
     public boolean isLoser = false;
-    public Game myGame; //Players can access the board, the turn number, and the opponent's pieces.
+    public Game myGame;
     public boolean isTurn = false;
     public int score = 0;
 
@@ -29,8 +29,7 @@ public class Player {
      * @param playerColor the Player's number
      * @return allyPieces a vector of the Player's pieces
      */
-    public Vector<Piece> getAllyPieces(Color playerColor)
-    {
+    public Vector<Piece> getAllyPieces(Color playerColor) {
         Vector<Piece> allyPieces;
 
         if(playerColor == Color.WHITE)
@@ -47,8 +46,7 @@ public class Player {
      * @param playerColor  the Player's number
      * @return enemyPieces  a vector of the enemy's pieces
      */
-    public Vector<Piece> getEnemyPieces(Color playerColor)
-    {
+    public Vector<Piece> getEnemyPieces(Color playerColor) {
         Vector<Piece> enemyPieces;
 
         if(playerColor == Color.WHITE)

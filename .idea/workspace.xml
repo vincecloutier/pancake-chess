@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="removed type stuff for instanceof resolves #8">
+    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="renamed pawn stuff to pancake">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Assets/blackPawn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Assets/blackPancake.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Assets/whitePawn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Assets/whitePancake.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/ChessBoardGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/ChessBoardGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exceptions/InvalidMovementException.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Pancake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,14 +91,7 @@
       <workItem from="1683983943019" duration="309000" />
       <workItem from="1683984566656" duration="211000" />
       <workItem from="1683984879535" duration="4211000" />
-      <workItem from="1684240062754" duration="9192000" />
-    </task>
-    <task id="LOCAL-00005" summary="added search in address book">
-      <created>1682020758769</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1682020758769</updated>
+      <workItem from="1684240062754" duration="10296000" />
     </task>
     <task id="LOCAL-00006" summary="added a get all contacts method">
       <created>1682020960831</created>
@@ -438,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684249043515</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="renamed pawn stuff to pancake">
+      <created>1684249341478</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1684249341478</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,7 +454,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="moving to cli for now" />
     <MESSAGE value="starting pieces from scratch" />
     <MESSAGE value="editing king" />
     <MESSAGE value="updated game" />
@@ -481,6 +478,7 @@
     <MESSAGE value="removed unneeded location" />
     <MESSAGE value="simplified setting pieces" />
     <MESSAGE value="removed type stuff for instanceof resolves #8" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed type stuff for instanceof resolves #8" />
+    <MESSAGE value="renamed pawn stuff to pancake" />
+    <option name="LAST_COMMIT_MESSAGE" value="renamed pawn stuff to pancake" />
   </component>
 </project>
