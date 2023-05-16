@@ -1,6 +1,6 @@
 package Game;
 import Exceptions.InvalidMovementException;
-
+import Pieces.*;
 import java.util.Vector;
 
 /**

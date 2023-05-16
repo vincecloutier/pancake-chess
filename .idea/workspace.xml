@@ -4,41 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="some mistake with move validity checking">
-      <change afterPath="$PROJECT_DIR$/src/Exceptions/InvalidMovementException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/Assets/blackBishop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/Assets/blackKing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/Assets/blackKnight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/Assets/blackPawn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/Assets/blackQueen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/Assets/blackRook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/Assets/whiteBishop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/Assets/whiteKing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/Assets/whiteKnight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/Assets/whitePawn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/Assets/whiteQueen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/Assets/whiteRook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/Chess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/ChessBoardGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game/Color.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game/Location.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game/PieceTypes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game/Type.java" afterDir="false" />
+    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="switching over to anneomcl">
+      <change afterPath="$PROJECT_DIR$/src/Pieces/Bishop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pieces/King.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pieces/Knight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pieces/Pawn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pieces/Piece.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Pieces/Princess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pieces/Queen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pieces/Rook.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Pieces/Zergling.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pieces/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Bishop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pieces/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/King.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pieces/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Knight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pieces/Pancake.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Pawn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pieces/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Piece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pieces/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Queen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pieces/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Rook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/ChessBoardGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/ChessBoardGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +50,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/vincecloutier/Repositories/shiny-pancake/src/Pieces",
+    "last_opened_file_path": "/Users/vincecloutier/Repositories/shiny-pancake/src",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -86,6 +65,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/Pieces" />
       <recent name="$PROJECT_DIR$/src/GUI" />
       <recent name="$PROJECT_DIR$/src/Game" />
@@ -119,7 +99,7 @@
       <workItem from="1683983943019" duration="309000" />
       <workItem from="1683984566656" duration="211000" />
       <workItem from="1683984879535" duration="4211000" />
-      <workItem from="1684240062754" duration="398000" />
+      <workItem from="1684240062754" duration="525000" />
     </task>
     <task id="LOCAL-00001" summary="created">
       <created>1682019059929</created>
@@ -352,7 +332,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683988840499</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="switching over to anneomcl">
+      <created>1684240498051</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1684240498051</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +357,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added variabels" />
     <MESSAGE value="consolidated classes" />
     <MESSAGE value="xml file" />
     <MESSAGE value="see the leetcode" />
@@ -395,6 +381,7 @@
     <MESSAGE value="creating pieces and added tostring and player types" />
     <MESSAGE value="updated game again" />
     <MESSAGE value="implemented toString" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented toString" />
+    <MESSAGE value="switching over to anneomcl" />
+    <option name="LAST_COMMIT_MESSAGE" value="switching over to anneomcl" />
   </component>
 </project>

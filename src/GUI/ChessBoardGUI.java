@@ -1,4 +1,5 @@
 package GUI;
+import Pieces.*;
 
 import Game.Game;
 import Game.Player;

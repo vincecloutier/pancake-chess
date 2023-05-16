@@ -1,5 +1,5 @@
 package Game;
-
+import Pieces.*;
 import java.util.Vector;
 
 /**
