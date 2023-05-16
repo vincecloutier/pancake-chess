@@ -38,7 +38,8 @@ public class Bishop extends Piece {
         int y_dir = (finalY - startY < 0) ? -1 : 1; // determining y direction
 
 
-        int [][] path = new int[2][pairs - 1]; // populating array of pairs
+        // populating array of pairs
+        int [][] path = new int[2][pairs];
         if(pairs - 1 > 0) {
             for(int i = 0; i < pairs - 1; i++) {
                 path[0][i] = startX + x_dir;

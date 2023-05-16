@@ -1,10 +1,7 @@
 package Pieces;
-
 import Game.Player;
 
 public class King extends Piece {
-
-    public boolean kingInCheck = false;
 
     /**
      * The constructor for a King.
@@ -27,7 +24,7 @@ public class King extends Piece {
         return (x_diff < 2) && (y_diff < 2);
     }
 
-    /*
+    /**
      * A function that draws a path from one point to another based on Piece type and stores the coordinates.
      * @param startX the initial X location
      * @param startY the initial Y location

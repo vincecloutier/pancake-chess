@@ -36,5 +36,4 @@ public abstract class Piece {
      * @return an array of coordinates of the given path
      */
     public abstract int[][] drawPath(int startX, int startY, int finalX, int finalY);
-
 }
