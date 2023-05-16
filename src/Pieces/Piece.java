@@ -36,4 +36,24 @@ public abstract class Piece {
      * @return an array of coordinates of the given path
      */
     public abstract int[][] drawPath(int startX, int startY, int finalX, int finalY);
+
+    /**
+     * A function that gets the co-ordinate pairs of a path from one point to another.
+     * @param startX the initial X location
+     * @param startY the initial Y location
+     * @param pairs the number of co-ordinate pairs in the path
+     * @param x_dir the X direction of the path
+     * @param y_dir the Y direction of the path
+     * @return an array of coordinates of the given path
+     */
+    public static int[][] getPairs(int startX, int startY, int pairs, int x_dir, int y_dir) {
+        int [][] path = new int[2][pairs];
+        if(pairs - 1 > 0) {
+            for(int i = 0; i < pairs - 1; i++) {
+                path[0][i] = startX + x_dir;
+                path[1][i] = startY + y_dir;
+            }
+        }
+        return path;
+    }
 }

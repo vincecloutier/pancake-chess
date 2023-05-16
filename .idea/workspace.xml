@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="removed color stuff">
+    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="simplified pieces">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pieces/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Bishop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pieces/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/King.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pieces/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Piece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pieces/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Queen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pieces/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Rook.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +41,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "extract.method.default.visibility": "private",
+    "extract.method.default.visibility": "public",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "/Users/vincecloutier/Repositories/shiny-pancake/src/GUI/Assets",
     "node.js.detected.package.eslint": "true",
@@ -98,14 +98,7 @@
       <workItem from="1684251493710" duration="6000" />
       <workItem from="1684251502787" duration="27000" />
       <workItem from="1684251532454" duration="1000" />
-      <workItem from="1684277890502" duration="773000" />
-    </task>
-    <task id="LOCAL-00008" summary="added variabels">
-      <created>1682113341654</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1682113341654</updated>
+      <workItem from="1684277890502" duration="1040000" />
     </task>
     <task id="LOCAL-00009" summary="consolidated classes">
       <created>1682172311405</created>
@@ -443,7 +436,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684250722200</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="simplified pieces">
+      <created>1684278727865</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1684278727866</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,7 +461,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updated game" />
     <MESSAGE value="creating pieces and added tostring and player types" />
     <MESSAGE value="updated game again" />
     <MESSAGE value="implemented toString" />
@@ -486,6 +485,7 @@
     <MESSAGE value="renamed pawn stuff to pancake" />
     <MESSAGE value="removed exception" />
     <MESSAGE value="removed color stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed color stuff" />
+    <MESSAGE value="simplified pieces" />
+    <option name="LAST_COMMIT_MESSAGE" value="simplified pieces" />
   </component>
 </project>

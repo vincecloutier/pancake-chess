@@ -39,13 +39,6 @@ public class Bishop extends Piece {
 
 
         // populating array of pairs
-        int [][] path = new int[2][pairs];
-        if(pairs - 1 > 0) {
-            for(int i = 0; i < pairs - 1; i++) {
-                path[0][i] = startX + x_dir;
-                path[1][i] = startY + y_dir;
-            }
-        }
-        return path;
+        return getPairs(startX, startY, pairs, x_dir, y_dir);
     }
 }
