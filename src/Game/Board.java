@@ -148,7 +148,7 @@ public class Board {
      */
     protected boolean isValidEndPoint(Piece piece, int finalX, int finalY) {
         return (boardArray[finalX][finalY] == null) || ((boardArray[finalX][finalY] != null)
-                && boardArray[finalX][finalY].player.playerColor != piece.player.playerColor);
+                && boardArray[finalX][finalY].player.goesFirst != piece.player.goesFirst);
     }
 
     /**

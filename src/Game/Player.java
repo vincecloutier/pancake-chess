@@ -7,55 +7,32 @@ import java.util.Vector;
  */
 public class Player {
 
-    public Color playerColor;
     public boolean goesFirst;
     public boolean isLoser = false;
     public Game myGame;
     public boolean isTurn = false;
-    public int score = 0;
 
     /**
      * Constructor for a Player.
-     * @param playerColor the Color of the Player
      * @param goesFirst if the Player goes first
      */
-    public Player(Color playerColor, boolean goesFirst)  {
-        this.playerColor = playerColor;
+    public Player(boolean goesFirst)  {
         this.goesFirst = goesFirst;
     }
 
     /**
      * Gets a list of the Player's pieces.
-     * @param playerColor the Player's number
      * @return allyPieces a vector of the Player's pieces
      */
-    public Vector<Piece> getAllyPieces(Color playerColor) {
-        Vector<Piece> allyPieces;
-
-        if(playerColor == Color.WHITE)
-            allyPieces = myGame.gameBoard.whitePieces;
-
-        else
-            allyPieces = myGame.gameBoard.blackPieces;
-
-        return allyPieces;
+    public Vector<Piece> getAllyPieces() {
+        return goesFirst ? myGame.gameBoard.whitePieces : myGame.gameBoard.blackPieces;
     }
 
     /**
      * Gets a list of the enemy's pieces.
-     * @param playerColor  the Player's number
      * @return enemyPieces  a vector of the enemy's pieces
      */
-    public Vector<Piece> getEnemyPieces(Color playerColor) {
-        Vector<Piece> enemyPieces;
-
-        if(playerColor == Color.WHITE)
-            enemyPieces = myGame.gameBoard.blackPieces;
-
-        else
-            enemyPieces = myGame.gameBoard.whitePieces;
-
-        return enemyPieces;
-
+    public Vector<Piece> getEnemyPieces() {
+        return goesFirst ? myGame.gameBoard.blackPieces : myGame.gameBoard.whitePieces;
     }
 }

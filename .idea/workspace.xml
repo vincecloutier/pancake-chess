@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="renamed pawn stuff to pancake">
+    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="removed exception">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exceptions/InvalidMovementException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Color.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,14 +91,7 @@
       <workItem from="1683983943019" duration="309000" />
       <workItem from="1683984566656" duration="211000" />
       <workItem from="1683984879535" duration="4211000" />
-      <workItem from="1684240062754" duration="10296000" />
-    </task>
-    <task id="LOCAL-00006" summary="added a get all contacts method">
-      <created>1682020960831</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1682020960831</updated>
+      <workItem from="1684240062754" duration="10570000" />
     </task>
     <task id="LOCAL-00007" summary="added small classes">
       <created>1682024630508</created>
@@ -436,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684249341478</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="removed exception">
+      <created>1684250398775</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1684250398775</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,7 +454,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="starting pieces from scratch" />
     <MESSAGE value="editing king" />
     <MESSAGE value="updated game" />
     <MESSAGE value="creating pieces and added tostring and player types" />
@@ -479,6 +478,7 @@
     <MESSAGE value="simplified setting pieces" />
     <MESSAGE value="removed type stuff for instanceof resolves #8" />
     <MESSAGE value="renamed pawn stuff to pancake" />
-    <option name="LAST_COMMIT_MESSAGE" value="renamed pawn stuff to pancake" />
+    <MESSAGE value="removed exception" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed exception" />
   </component>
 </project>

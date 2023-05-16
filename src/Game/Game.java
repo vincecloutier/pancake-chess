@@ -13,8 +13,8 @@ public class Game {
      */
     public Game() {
         gameBoard = new Board(this);
-        player1 = new Player(Color.WHITE, true);
-        player2 = new Player(Color.BLACK, false);
+        player1 = new Player(true);
+        player2 = new Player(false);
         player1.myGame = this;
         player2.myGame = this;
         gameBoard.setPieces();
