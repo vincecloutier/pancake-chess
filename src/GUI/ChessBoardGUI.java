@@ -12,8 +12,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
-
-
+import java.util.Objects;
 
 
 public class ChessBoardGUI {
@@ -70,55 +69,39 @@ public class ChessBoardGUI {
             Point rv = new Point();
             Piece selection = game.gameBoard.boardArray[button.getLocation(rv).x/100][button.getLocation(rv).y/100];
 
-            if(selection == null || (selectedPiece != null && selection.player != selectedPiece.player && selectedPiece.player == currPlayer)) {
-                if(selectedPiece == null)
-                    return;
-
-                else {
-                    selectedPiece.player.myGame.gameBoard.movePiece(selectedPiece, button.getLocation(rv).x / 100, button.getLocation(rv).y / 100);
-                    if(game.capture)
-                    {
+            if(selection == null || (selectedPiece != null && selection.player != selectedPiece.player
+                    && selectedPiece.player == currPlayer)) {
+                if (selectedPiece != null) {
+                    selectedPiece.player.myGame.gameBoard.movePiece(selectedPiece, button.getLocation(rv).x / 100,
+                            button.getLocation(rv).y / 100);
+                    if(game.capture) {
                         button.setIcon(null);
                         Icon img = selectedSquare.getIcon();
                         button.setIcon(img);
                         selectedSquare.setIcon(null);
-                    }
-                    else if(game.invalid) {
+                    } else if(game.invalid) {
                         //game.capture = false;
                         selectedSquare = null;
                         selectedPiece = null;
                         game.invalid = false;
                         return;
-                    }
-
-                    else
-                    {
+                    } else {
                         Icon img = selectedSquare.getIcon();
                         button.setIcon(img);
                         selectedSquare.setIcon(null);
                     }
-
                     game.capture = false;
                     selectedSquare = null;
                     selectedPiece = null;
                     game.invalid = false;
                     notifyInput();
-
-
                 }
-
-            }
-
-
-            else
-            {
+            } else {
                 if(selection.player == currPlayer) {
                     selectedPiece = game.gameBoard.boardArray[button.getLocation(rv).x / 100][button.getLocation(rv).y / 100];
                     selectedSquare = button;
                 }
             }
-
-
         }
     }
         /**
@@ -156,97 +139,107 @@ public class ChessBoardGUI {
                         if (row == 1) {
                             Image blackPawn = null;
                             try {
-                                blackPawn = ImageIO.read(getClass().getResource("Assets/blackPawn.png"));
-                            } catch (IOException e) {
+                                blackPawn = ImageIO.read(Objects.requireNonNull(getClass().getResource("Assets/blackPawn.png")));
+                            } catch (IOException ignored) {
                             }
+                            assert blackPawn != null;
                             button.setIcon(new ImageIcon(blackPawn));
                         }
 
                         if (row == 6) {
                             Image whitePawn = null;
                             try {
-                                whitePawn = ImageIO.read(getClass().getResource("Assets/whitePawn.png"));
-                            } catch (IOException e) {
+                                whitePawn = ImageIO.read(Objects.requireNonNull(getClass().getResource("Assets/whitePawn.png")));
+                            } catch (IOException ignored) {
                             }
+                            assert whitePawn != null;
                             button.setIcon(new ImageIcon(whitePawn));
                         }
 
                         if (row == 0 && (col == 0 || col == 7)) {
                             Image blackRook = null;
                             try {
-                                blackRook = ImageIO.read(getClass().getResource("Assets/blackRook.png"));
-                            } catch (IOException e) {
+                                blackRook = ImageIO.read(Objects.requireNonNull(getClass().getResource("Assets/blackRook.png")));
+                            } catch (IOException ignored) {
                             }
+                            assert blackRook != null;
                             button.setIcon(new ImageIcon(blackRook));
                         }
 
                         if (row == 7 && (col == 0 || col == 7)) {
                             Image whiteRook = null;
                             try {
-                                whiteRook = ImageIO.read(getClass().getResource("Assets/whiteRook.png"));
-                            } catch (IOException e) {
+                                whiteRook = ImageIO.read(Objects.requireNonNull(getClass().getResource("Assets/whiteRook.png")));
+                            } catch (IOException ignored) {
                             }
+                            assert whiteRook != null;
                             button.setIcon(new ImageIcon(whiteRook));
                         }
 
                         if (row == 0 && (col == 1 || col == 6)) {
                             Image blackKnight = null;
                             try {
-                                blackKnight = ImageIO.read(getClass().getResource("Assets/blackKnight.png"));
-                            } catch (IOException e) {
+                                blackKnight = ImageIO.read(Objects.requireNonNull(getClass().getResource("Assets/blackKnight.png")));
+                            } catch (IOException ignored) {
                             }
+                            assert blackKnight != null;
                             button.setIcon(new ImageIcon(blackKnight));
                         }
 
                         if (row == 7 && (col == 1 || col == 6)) {
                             Image whiteKnight = null;
                             try {
-                                whiteKnight = ImageIO.read(getClass().getResource("Assets/whiteKnight.png"));
-                            } catch (IOException e) {
+                                whiteKnight = ImageIO.read(Objects.requireNonNull(getClass().getResource("Assets/whiteKnight.png")));
+                            } catch (IOException ignored) {
                             }
+                            assert whiteKnight != null;
                             button.setIcon(new ImageIcon(whiteKnight));
                         }
 
                         if (row == 0 && (col == 2 || col == 5)) {
                             Image blackBishop = null;
                             try {
-                                blackBishop = ImageIO.read(getClass().getResource("Assets/blackBishop.png"));
-                            } catch (IOException e) {
+                                blackBishop = ImageIO.read(Objects.requireNonNull(getClass().getResource("Assets/blackBishop.png")));
+                            } catch (IOException ignored) {
                             }
+                            assert blackBishop != null;
                             button.setIcon(new ImageIcon(blackBishop));
                         }
 
                         if (row == 7 && (col == 2 || col == 5)) {
                             Image whiteBishop = null;
                             try {
-                                whiteBishop = ImageIO.read(getClass().getResource("Assets/whiteBishop.png"));
-                            } catch (IOException e) {
+                                whiteBishop = ImageIO.read(Objects.requireNonNull(getClass().getResource("Assets/whiteBishop.png")));
+                            } catch (IOException ignored) {
                             }
+                            assert whiteBishop != null;
                             button.setIcon(new ImageIcon(whiteBishop));
                         }
 
                         if (row == 0 && col == 3) {
                             Image blackQueen = null;
                             try {
-                                blackQueen = ImageIO.read(getClass().getResource("Assets/blackQueen.png"));
-                            } catch (IOException e) {
+                                blackQueen = ImageIO.read(Objects.requireNonNull(getClass().getResource("Assets/blackQueen.png")));
+                            } catch (IOException ignored) {
                             }
+                            assert blackQueen != null;
                             button.setIcon(new ImageIcon(blackQueen));
                         }
 
                         if (row == 7 && col == 3) {
                             Image whiteQueen = null;
                             try {
-                                whiteQueen = ImageIO.read(getClass().getResource("Assets/whiteQueen.png"));
-                            } catch (IOException e) {
+                                whiteQueen = ImageIO.read(Objects.requireNonNull(getClass().getResource("Assets/whiteQueen.png")));
+                            } catch (IOException ignored) {
                             }
+                            assert whiteQueen != null;
                             button.setIcon(new ImageIcon(whiteQueen));
                         }
 
                         if (row == 0 && col == 4) {
                             Image blackKing = null;
                             try {
-                                blackKing = ImageIO.read(getClass().getResource("Assets/blackKing.png"));
+                                blackKing = ImageIO.read(Objects.requireNonNull(getClass().getResource("Assets/blackKing.png")));
                             } catch (IOException ignored) {
                             }
                             assert blackKing != null;
@@ -256,7 +249,7 @@ public class ChessBoardGUI {
                         if (row == 7 && col == 4) {
                             Image whiteKing = null;
                             try {
-                                whiteKing = ImageIO.read(getClass().getResource("Assets/whiteKing.png"));
+                                whiteKing = ImageIO.read(Objects.requireNonNull(getClass().getResource("Assets/whiteKing.png")));
                             } catch (IOException ignored) {
                             }
                             assert whiteKing != null;
