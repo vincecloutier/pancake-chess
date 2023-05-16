@@ -70,13 +70,11 @@ public class ChessBoardGUI {
             Point rv = new Point();
             Piece selection = game.gameBoard.boardArray[button.getLocation(rv).x/100][button.getLocation(rv).y/100];
 
-            if(selection == null || (selectedPiece != null && selection.player != selectedPiece.player && selectedPiece.player == currPlayer))
-            {
+            if(selection == null || (selectedPiece != null && selection.player != selectedPiece.player && selectedPiece.player == currPlayer)) {
                 if(selectedPiece == null)
                     return;
 
-                else
-                {
+                else {
                     selectedPiece.player.myGame.gameBoard.movePiece(selectedPiece, button.getLocation(rv).x / 100, button.getLocation(rv).y / 100);
                     if(game.capture)
                     {
@@ -85,10 +83,8 @@ public class ChessBoardGUI {
                         button.setIcon(img);
                         selectedSquare.setIcon(null);
                     }
-                    else if(game.invalid)
-                    {
-                        JOptionPane.showMessageDialog(null, "Invalid movement! Please try another move.");
-                        game.capture = false;
+                    else if(game.invalid) {
+                        //game.capture = false;
                         selectedSquare = null;
                         selectedPiece = null;
                         game.invalid = false;
@@ -273,8 +269,6 @@ public class ChessBoardGUI {
                         MyActionListener mal = new MyActionListener();
                         button.addActionListener(mal);
                         add(button, gbc);
-
-
 
                     }
                 }
