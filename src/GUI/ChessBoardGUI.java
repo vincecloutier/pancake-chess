@@ -30,8 +30,7 @@ public class ChessBoardGUI {
     }
 
 
-    public synchronized void waitForInput()
-    {
+    public synchronized void waitForInput() {
         while(!endTurn) {
             try {
                 wait();
