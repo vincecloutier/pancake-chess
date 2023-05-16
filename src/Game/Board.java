@@ -26,62 +26,34 @@ public class Board {
      * Sets pieces on the board and initializes lists of pieces.
      */
     public void setPieces() {
-        setPlayer1Pieces();
-        setPlayer2Pieces();
-        setPieceVectors();
-    }
 
-    /**
-     * Places Player 2's pieces on the board.
-     */
-    public void setPlayer2Pieces() {
-        Piece[][] board = this.boardArray;
-
+        // Pawns
         for(int i = 0; i < 8; i++) {
-            Piece pawn = new Pawn(i, 1, this.game.player2);
+            new Pawn(i, 6, this.game.player1);
+            new Pawn(i, 1, this.game.player2);
         }
 
-        Piece topRook = new Rook(0, 0, this.game.player2);
-        Piece bottomRook = new Rook(7, 0, this.game.player2);
+        // Player 1's Named Pieces
+        new Rook(0, 7, this.game.player1);
+        new Rook(7, 7, this.game.player1);
+        new Knight(1, 7, this.game.player1);
+        new Knight(6,7, this.game.player1);
+        new Bishop(2, 7, this.game.player1);
+        new Bishop(5, 7, this.game.player1);
+        new Queen(3, 7, this.game.player1);
+        new King(4, 7, this.game.player1);
 
-        Piece topKnight = new Knight(1, 0, this.game.player2);
-        Piece bottomKnight = new Knight(6, 0, this.game.player2);
+        // Player 2's Named Pieces
+        new Rook(0, 0, this.game.player2);
+        new Rook(7, 0, this.game.player2);
+        new Knight(1, 0, this.game.player2);
+        new Knight(6, 0, this.game.player2);
+        new Bishop(2, 0, this.game.player2);
+        new Bishop(5, 0, this.game.player2);
+        new Queen(3, 0, this.game.player2);
+        new King(4, 0, this.game.player2);
 
-        Piece topBishop = new Bishop(2, 0, this.game.player2);
-        Piece bottomBishop = new Bishop(5, 0, this.game.player2);
-
-        Piece queen = new Queen(3, 0, this.game.player2);
-        King king = new King(4, 0, this.game.player2);
-    }
-
-    /**
-     * Places Player 1's pieces on the board. (WHITE)
-     */
-    public void setPlayer1Pieces() {
-        Piece[][] board = this.boardArray;
-
-        for(int i = 0; i < 8; i++) {
-            Piece pawn = new Pawn(i, 6, this.game.player1);
-            board[i][6] = pawn;
-        }
-
-        Piece rook = new Rook(0, 7, this.game.player1);
-        Piece rook2 = new Rook(7, 7, this.game.player1);
-
-        Piece knight = new Knight(1, 7, this.game.player1);
-        Piece knight2 = new Knight(6,7, this.game.player1);
-
-        Piece bishop = new Bishop(2, 7, this.game.player1);
-        Piece bishop2 = new Bishop(5, 7, this.game.player1);
-
-        Piece queen = new Queen(3, 7, this.game.player1);
-        King king = new King(4, 7, this.game.player1);
-    }
-
-    /**
-     * Initializes the game's vectors of Player 1 and Player 2's pieces.
-     */
-    public void setPieceVectors() {
+        // Initialize the game's vectors for both Player 1 and Player 2's pieces.
         for(int i = 0; i < 8; i++) {
             whitePieces.add(this.boardArray[i][6]);
             whitePieces.add(this.boardArray[i][7]);
@@ -89,7 +61,6 @@ public class Board {
             blackPieces.add(this.boardArray[i][1]);
         }
     }
-
 
     /**
      * A function to move a piece. It checks to see if the move is valid for any piece, then it checks if
@@ -126,11 +97,9 @@ public class Board {
      * @param finalY the final Y location
      * @return a boolean indicating whether the move is valid
      */
-    public boolean isValidMove(Piece piece, int finalX, int finalY)
-    {
+    public boolean isValidMove(Piece piece, int finalX, int finalY) {
         // TODO: Make it so that pieces can't move if the king is in check
         int [][] path = piece.drawPath(piece.x, piece.y, finalX, finalY);
-
         return isWithinBounds(finalX, finalY) && (validLeaping(piece, path)) && (isNotOrigin(piece, finalX, finalY))
                 && (isValidEndPoint(piece, finalX, finalY));
     }
@@ -152,11 +121,10 @@ public class Board {
      * @return  a boolean indicating if there is invalid leaping
      */
     protected boolean validLeaping(Piece piece, int[][] movePath) {
-        if(piece.getType() == Type.KNIGHT) // knights can leap
+        if(piece.getType() == Type.KNIGHT)
             return true;
 
         int pairs = movePath[0].length;
-
         for(int i = 0; i < pairs - 1; i++) {
             if(boardArray[movePath[0][i]][movePath[1][i]] != null) {
                 return false;
@@ -217,7 +185,8 @@ public class Board {
         int originX = piece.x;
         int originY = piece.y;
 
-        piece.x = finalX; // set piece's new location
+        // set piece's new location
+        piece.x = finalX;
         piece.y = finalY;
 
         boardArray[finalX][finalY] = piece; // set array to new piece's position
