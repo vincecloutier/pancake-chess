@@ -13,8 +13,7 @@ public class Location {
      * @param x    the x coordinate
      * @param y    the y coordinate
      */
-    public Location(int x, int y, Player player)
-    {
+    public Location(int x, int y, Player player) {
         this.x = x;
         this.y = y;
     }

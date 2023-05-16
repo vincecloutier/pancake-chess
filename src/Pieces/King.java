@@ -30,10 +30,7 @@ public class King extends Piece {
      * A function that gets the Piece type.
      * @return  an integer indicating the Piece type
      */
-    public Type getType()
-    {
-        return Type.KING;
-    }
+    public Type getType() {return Type.KING;}
 
     /**
      * A function that determines whether the King is moving one space in any direction, is not in check, and
@@ -42,10 +39,8 @@ public class King extends Piece {
      * @param finalY the final Y location
      * @return a boolean indicating whether the path is valid
      */
-    public boolean isValidPath(int finalX, int finalY)
-    {
-       /* if(isInCheckmate())
-        {
+    public boolean isValidPath(int finalX, int finalY) {
+       /* if(isInCheckmate()) {
             this.player.isLoser = true;
             return false;
         }*/
@@ -81,8 +76,7 @@ public class King extends Piece {
      * A function determining whether the king is in checkmate. It determines if the king can move in any direction
      * @return
      */
-    public boolean isInCheckmate()
-    {
+    public boolean isInCheckmate() {
         Vector<Piece> enemies = this.player.getEnemyPieces(this.player.playerColor);
         Vector<Piece> attackingEnemies = new Vector<Piece>(1);
 
@@ -212,13 +206,11 @@ public class King extends Piece {
      * @param y
      * @return a boolean indicating whether the enemy can capture the king
      */
-    protected boolean canKillKing(Piece enemy, int x, int y)
-    {
+    protected boolean canKillKing(Piece enemy, int x, int y) {
         Board board = enemy.player.myGame.gameBoard;
 
-        //pawns can only kill king if there is a piece to capture, so must consider it while king is in place
-        if(enemy.getType() == Type.PAWN && (board.isValidMove(enemy, x, y) && enemy.isValidPath(x, y)))
-        {
+        // pawns can only kill king if there is a piece to capture, so must consider it while king is in place
+        if(enemy.getType() == Type.PAWN && (board.isValidMove(enemy, x, y) && enemy.isValidPath(x, y))) {
             return true;
         }
 

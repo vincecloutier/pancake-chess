@@ -9,8 +9,7 @@ import javax.swing.*;
  */
 public class Chess {
 
-    public void gameLoop()
-    {
+    public void gameLoop() {
         ChessBoardGUI gui = new ChessBoardGUI();
         gui.game = new Game();
 

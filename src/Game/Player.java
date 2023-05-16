@@ -16,19 +16,18 @@ public class Player {
 
     /**
      * Constructor for a Player.
-     * @param playerColor
-     * @param goesFirst
+     * @param playerColor the Color of the Player
+     * @param goesFirst if the Player goes first
      */
-    public Player(Color playerColor, boolean goesFirst)
-    {
+    public Player(Color playerColor, boolean goesFirst)  {
         this.playerColor = playerColor;
         this.goesFirst = goesFirst;
     }
 
     /**
-     * Gets a list of the player's pieces.
-     * @param playerColor  the Player's number
-     * @return allyPieces  a vector of the player's pieces
+     * Gets a list of the Player's pieces.
+     * @param playerColor the Player's number
+     * @return allyPieces a vector of the Player's pieces
      */
     public Vector<Piece> getAllyPieces(Color playerColor)
     {

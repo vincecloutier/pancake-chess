@@ -32,16 +32,14 @@ public class ChessBoardGUI {
 
     public synchronized void waitForInput()
     {
-        while(!endTurn)
-        {
-            try{
+        while(!endTurn) {
+            try {
                 wait();
             } catch (InterruptedException e){ e.printStackTrace();}
         }
     }
 
-    public synchronized  void notifyInput()
-    {
+    public synchronized  void notifyInput() {
         endTurn = true;
         notifyAll();
     }
@@ -65,10 +63,10 @@ public class ChessBoardGUI {
         });
     }
 
-    class MyActionListener implements ActionListener{
+    class MyActionListener implements ActionListener {
 
         @Override
-        public void actionPerformed(ActionEvent e){
+        public void actionPerformed(ActionEvent e) {
             JButton button = (JButton) e.getSource();
             Point rv = new Point();
             Piece selection = game.gameBoard.boardArray[button.getLocation(rv).x/100][button.getLocation(rv).y/100];
@@ -254,8 +252,9 @@ public class ChessBoardGUI {
                             Image blackKing = null;
                             try {
                                 blackKing = ImageIO.read(getClass().getResource("Assets/blackKing.png"));
-                            } catch (IOException e) {
+                            } catch (IOException ignored) {
                             }
+                            assert blackKing != null;
                             button.setIcon(new ImageIcon(blackKing));
                         }
 
@@ -263,8 +262,9 @@ public class ChessBoardGUI {
                             Image whiteKing = null;
                             try {
                                 whiteKing = ImageIO.read(getClass().getResource("Assets/whiteKing.png"));
-                            } catch (IOException e) {
+                            } catch (IOException ignored) {
                             }
+                            assert whiteKing != null;
                             button.setIcon(new ImageIcon(whiteKing));
                         }
 
@@ -276,7 +276,6 @@ public class ChessBoardGUI {
                         add(button, gbc);
 
 
-                        //cellPane.setBorder(border);
 
                     }
                 }
