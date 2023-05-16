@@ -152,11 +152,7 @@ public class Board {
      * @return  a boolean indicating if there is invalid leaping
      */
     protected boolean validLeaping(Piece piece, int[][] movePath) {
-        if(piece.getType() == Type.KNIGHT) //knights can leap
-            return true;
-
-        //pawns only have a path under special circumstances. kings will never have a path
-        if(piece.getType() == Type.PAWN || piece.getType() == Type.KING)
+        if(piece.getType() == Type.KNIGHT) // knights can leap
             return true;
 
         int pairs = movePath[0].length;

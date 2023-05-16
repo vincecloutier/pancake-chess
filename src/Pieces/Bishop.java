@@ -42,30 +42,25 @@ public class Bishop extends Piece {
 
     /**
      * A function that draws a path from one point to another based on Piece type and stores the coordinates.
-     * @param startX   the initial X location
-     * @param startY   the initial Y location
+     * @param startX the initial X location
+     * @param startY the initial Y location
      * @param finalX the final X location
      * @param finalY the final Y location
      * @return an array of coordinates of the given path
      */
     public int [][] drawPath(int startX, int startY, int finalX, int finalY) {
         int pairs = Math.abs(finalX - startX); // length of path
+        int x_dir = (finalX - startX < 0) ? -1 : 1; // determining x direction
+        int y_dir = (finalY - startY < 0) ? -1 : 1; // determining y direction
 
-        int x_dir = 1, y_dir = 1; // determining direction
-        if(finalX - startX < 0)
-            x_dir = -1;
-        if(finalY - startY < 0)
-            y_dir = -1;
 
         int [][] path = new int[2][pairs - 1]; // populating array of pairs
-
         if(pairs - 1 > 0) {
             for(int i = 0; i < pairs - 1; i++) {
                 path[0][i] = startX + x_dir;
                 path[1][i] = startY + y_dir;
             }
         }
-
         return path;
     }
 }

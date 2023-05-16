@@ -16,8 +16,7 @@ public abstract class Piece {
      * @param y    the y location of the Piece
      * @param player    the Player object associated with the Piece
      */
-    public Piece(int x, int y, Player player)
-    {
+    public Piece(int x, int y, Player player) {
         this.x = x;
         this.y = y;
         this.player = player;

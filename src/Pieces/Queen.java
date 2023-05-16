@@ -24,8 +24,7 @@ public class Queen extends Piece {
      * A function that gets the Piece type.
      * @return  an integer indicating the Piece type
      */
-    public Type getType()
-    {
+    public Type getType() {
         return Type.QUEEN;
     }
 
@@ -38,7 +37,6 @@ public class Queen extends Piece {
     public boolean isValidPath(int finalX, int finalY) {
         int x_diff = Math.abs(finalX - this.x);
         int y_diff = Math.abs(finalY - this.y);
-
         return (x_diff == y_diff) || (finalX == this.x) || (finalY == this.y);
     }
 
@@ -54,41 +52,26 @@ public class Queen extends Piece {
         int pairs;
         int x_dir = 0, y_dir = 0;
 
-        if(finalY == startY) //if queen is travelling horizontally
-        {
+        // the queen is travelling horizontally
+        if(finalY == startY) {
             pairs = Math.abs(finalX - startX);
-            if(finalX - startX < 0)
-                x_dir = -1;
-            else
-                x_dir = 1;
+            x_dir = (finalX - startX < 0) ? -1 : 1;
         }
-
-        else if(finalX == startX) //if queen is travelling vertically
-        {
+        // the queen is travelling vertically
+        else if (finalX == startX) {
             pairs = Math.abs(finalY - startY);
-            if(finalY - startY < 0)
-                y_dir = -1;
-            else
-                y_dir = 1;
+            y_dir = (finalY - startY < 0) ? -1 : 1;
         }
-
-        else //if queen is travelling diagonally
-        {
+        // the queen is travelling diagonally
+        else {
             pairs = Math.abs(finalX - startX);
-            if(finalX - startX < 0)
-                x_dir = -1;
-            else
-                x_dir = 1;
-            if(finalY - startY < 0)
-                y_dir = -1;
-            else
-                y_dir = 1;
+            x_dir = (finalX - startX < 0) ? -1 : 1;
+            y_dir = (finalY - startY < 0) ? -1 : 1;
         }
 
         int [][] path = new int[2][pairs];
-
-        if(pairs - 1 > 0) {
-            for(int i = 0; i < pairs - 1; i++) {
+        if (pairs - 1 > 0) {
+            for (int i = 0; i < pairs - 1; i++) {
                 path[0][i] = startX + x_dir;
                 path[1][i] = startY + y_dir;
             }

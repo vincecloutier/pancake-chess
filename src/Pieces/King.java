@@ -20,8 +20,7 @@ public class King extends Piece {
      * @param y the King's Y location
      * @param player the King's associated player
      */
-    public King(int x, int y, Player player)
-    {
+    public King(int x, int y, Player player) {
         super(x, y, player);
         type = Type.KING;
     }
@@ -214,9 +213,9 @@ public class King extends Piece {
             return true;
         }
 
-        //must delete the king in its current state temporarily to see if the enemy's path to the king's
-        //final position is possible. there are some cases in which leaving the king in its original position
-        //will "block" the enemy piece that could capture the king if the king was in its final location
+        // must delete the king in its current state temporarily to see if the enemy's path to the king's
+        // final position is possible. there are some cases in which leaving the king in its original position
+        // will "block" the enemy piece that could capture the king if the king was in its final location
         Player player = this.player;
         int kingX = this.x;
         int kingY = this.y;
@@ -247,7 +246,7 @@ public class King extends Piece {
      */
     public int [][] drawPath(int startX, int startY, int finalX, int finalY)
     {
-        int pairs = 0; //kings will never have a path
+        int pairs = 0; // kings will never have a path
         int [][] path = new int[2][pairs];
 
         return path;

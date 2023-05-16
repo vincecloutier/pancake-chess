@@ -38,22 +38,18 @@ public class Knight extends Piece {
     public boolean isValidPath(int finalX, int finalY) {
         int x_diff = Math.abs(finalX - this.x);
         int y_diff = Math.abs(finalY - this.y);
-
         return (x_diff == 1 && y_diff == 2) || (x_diff == 2 && y_diff == 1);
     }
 
     /**
      * A function that draws a path from one point to another based on Piece type and stores the coordinates.
-     * @param startX   the initial X location
-     * @param startY   the initial Y location
+     * @param startX the initial X location
+     * @param startY the initial Y location
      * @param finalX the final X location
      * @param finalY the final Y location
      * @return an array of coordinates of the given path
      */
     public int [][] drawPath(int startX, int startY, int finalX, int finalY) {
-        int pairs = 0; // knights can leap, so a path is not necessary
-        int [][] path = new int[2][pairs];
-
-        return path;
+        return new int[2][0]; // knights can leap, so a path is not necessary
     }
 }

@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="refactoring">
+    <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="pawn has new dynamics as required resolves #1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Color.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pieces/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Bishop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pieces/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/King.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pieces/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Knight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Pawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pieces/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Piece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pieces/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Queen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pieces/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Rook.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +97,7 @@
       <workItem from="1683983943019" duration="309000" />
       <workItem from="1683984566656" duration="211000" />
       <workItem from="1683984879535" duration="4211000" />
-      <workItem from="1684240062754" duration="4636000" />
+      <workItem from="1684240062754" duration="5925000" />
     </task>
     <task id="LOCAL-00001" summary="created">
       <created>1682019059929</created>
@@ -406,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684244525506</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="pawn has new dynamics as required resolves #1">
+      <created>1684244758850</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1684244758850</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -424,7 +439,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added constructors for board code" />
     <MESSAGE value="currently setting the pieces on the board" />
     <MESSAGE value="currently creating a new game" />
     <MESSAGE value="added player info to pass in" />
@@ -449,6 +463,7 @@
     <MESSAGE value="removed old pancake files" />
     <MESSAGE value="removed PieceTypes Class" />
     <MESSAGE value="refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
+    <MESSAGE value="pawn has new dynamics as required resolves #1" />
+    <option name="LAST_COMMIT_MESSAGE" value="pawn has new dynamics as required resolves #1" />
   </component>
 </project>

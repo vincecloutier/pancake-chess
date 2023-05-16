@@ -1,6 +1,5 @@
 package Pieces;
 
-import Game.Color;
 import Game.Player;
 import Game.Type;
 
