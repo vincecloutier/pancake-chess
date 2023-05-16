@@ -97,8 +97,8 @@ public class Queen extends Piece {
         {
             for(int i = 0; i < pairs - 1; i++)
             {
-                path[0][i] = startX + x_dir*1;
-                path[1][i] = startY + y_dir*1;
+                path[0][i] = startX + x_dir;
+                path[1][i] = startY + y_dir;
             }
         }
 
