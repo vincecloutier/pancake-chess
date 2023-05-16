@@ -16,8 +16,7 @@ public class Pawn extends Piece {
      * @param y the Pawn's Y location
      * @param player the Pawn's associated player
      */
-    public Pawn(int x, int y, Player player)
-    {
+    public Pawn(int x, int y, Player player) {
         super(x, y, player);
         type = Type.PAWN;
     }
