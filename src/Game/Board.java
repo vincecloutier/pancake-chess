@@ -8,7 +8,6 @@ import java.util.Vector;
  */
 public class Board {
 
-    public int height, width;
     public Piece[][] boardArray;
     public Game game; //Boards can access information about players, pieces and turns.
     public Vector<Piece> whitePieces = new Vector<Piece>(16);
@@ -16,23 +15,17 @@ public class Board {
 
     /**
      * The constructor for a board.
-     * @param height the height of the board
-     * @param width the width of the board
      * @param game the game associated with this board
      */
-    public Board(int height, int width, Game game)
-    {
-        this.height = height;
-        this.width = width;
-        boardArray = new Piece[height][width];
+    public Board(Game game) {
+        boardArray = new Piece[8][8];
         this.game = game;
     }
 
     /**
      * Sets pieces on the board and initializes lists of pieces.
      */
-    public void setPieces()
-    {
+    public void setPieces() {
         setPlayer1Pieces();
         setPlayer2Pieces();
         setPieceVectors();
@@ -41,12 +34,10 @@ public class Board {
     /**
      * Places Player 2's pieces on the board.
      */
-    public void setPlayer2Pieces()
-    {
+    public void setPlayer2Pieces() {
         Piece[][] board = this.boardArray;
 
-        for(int i = 0; i < 8; i++)
-        {
+        for(int i = 0; i < 8; i++) {
             Piece pawn = new Pawn(i, 1, this.game.player2);
         }
 
@@ -66,12 +57,10 @@ public class Board {
     /**
      * Places PLayer 1's pieces on the board. (WHITE)
      */
-    public void setPlayer1Pieces()
-    {
+    public void setPlayer1Pieces() {
         Piece[][] board = this.boardArray;
 
-        for(int i = 0; i < 8; i++)
-        {
+        for(int i = 0; i < 8; i++) {
             Piece pawn = new Pawn(i, 6, this.game.player1);
             board[i][6] = pawn;
         }
@@ -92,10 +81,8 @@ public class Board {
     /**
      * Initializes the game's vectors of Player 1 and Player 2's pieces.
      */
-    public void setPieceVectors()
-    {
-        for(int i = 0; i < 8; i++)
-        {
+    public void setPieceVectors() {
+        for(int i = 0; i < 8; i++) {
             whitePieces.add(this.boardArray[i][6]);
             whitePieces.add(this.boardArray[i][7]);
             blackPieces.add(this.boardArray[i][0]);
@@ -111,24 +98,14 @@ public class Board {
      * @param finalX the final X location
      * @param finalY the final Y location
      */
-    public void movePiece(Piece piece, int finalX, int finalY)
-    {
-        if(isValidMove(piece, finalX, finalY) && piece.isValidPath(finalX, finalY))
-        {
-            if(isCapture(piece, finalX, finalY))
-            {
+    public void movePiece(Piece piece, int finalX, int finalY) {
+        if(isValidMove(piece, finalX, finalY) && piece.isValidPath(finalX, finalY)) {
+            if(isCapture(piece, finalX, finalY)) {
                 game.capture = true;
                 boardArray[finalX][finalY] = null;
             }
-
             setNewPieceLocation(piece, finalX, finalY);
-
-
-        }
-
-
-        else
-        {
+        } else {
             try {
                 throw new InvalidMovementException();
             } catch (InvalidMovementException e) {
@@ -136,10 +113,7 @@ public class Board {
                 game.invalid = true;
             }
         }
-
-        return;
     }
-
 
 
     /**
@@ -154,16 +128,11 @@ public class Board {
      */
     public boolean isValidMove(Piece piece, int finalX, int finalY)
     {
-        //TO-DO: Make it so that pieces can't move if the king is in check
+        // TODO: Make it so that pieces can't move if the king is in check
         int [][] path = piece.drawPath(piece.x, piece.y, finalX, finalY);
 
-        if(isWithinBounds(finalX,finalY)&& (validLeaping(piece, path))&& (isNotOrigin(piece, finalX, finalY))
-                && (isValidEndPoint(piece, finalX, finalY)))
-        {
-            return true;
-        }
-
-        return false;
+        return isWithinBounds(finalX, finalY) && (validLeaping(piece, path)) && (isNotOrigin(piece, finalX, finalY))
+                && (isValidEndPoint(piece, finalX, finalY));
     }
 
     /**
@@ -172,12 +141,8 @@ public class Board {
      * @param finalY the final Y location
      * @return  a boolean indicating whether the coordinates are in bounds
      */
-    protected boolean isWithinBounds(int finalX, int finalY)
-    {
-        if((0 <= finalX && finalX < width) && (0 <= finalY && finalY < height))
-            return true;
-
-        return false;
+    protected boolean isWithinBounds(int finalX, int finalY) {
+        return (0 <= finalX && finalX < 8) && (0 <= finalY && finalY < 8);
     }
 
     /**
@@ -186,8 +151,7 @@ public class Board {
      * @param movePath the path of the piece, not including origin or endpoint
      * @return  a boolean indicating if there is invalid leaping
      */
-    protected boolean validLeaping(Piece piece, int[][] movePath)
-    {
+    protected boolean validLeaping(Piece piece, int[][] movePath) {
         if(piece.getType() == Type.KNIGHT) //knights can leap
             return true;
 
@@ -197,14 +161,11 @@ public class Board {
 
         int pairs = movePath[0].length;
 
-        for(int i = 0; i < pairs - 1; i++)
-        {
-            if(boardArray[movePath[0][i]][movePath[1][i]] != null)
-            {
+        for(int i = 0; i < pairs - 1; i++) {
+            if(boardArray[movePath[0][i]][movePath[1][i]] != null) {
                 return false;
             }
         }
-
         return true;
     }
 
@@ -215,16 +176,8 @@ public class Board {
      * @param finalY the final Y location
      * @return a boolean indicating whether the end coordinates are the same as the start coordinates
      */
-    protected boolean isNotOrigin(Piece piece, int finalX, int finalY)
-    {
-        if((piece.x != finalX) || (piece.y != finalY))
-            return true;
-
-        else
-        {
-            return false;
-        }
-
+    protected boolean isNotOrigin(Piece piece, int finalX, int finalY) {
+        return (piece.x != finalX) || (piece.y != finalY);
     }
 
     /**
@@ -234,15 +187,9 @@ public class Board {
      * @param finalY the final Y location
      * @return  a boolean indicating whether the end coordinates are valid
      */
-    protected boolean isValidEndPoint(Piece piece, int finalX, int finalY)
-    {
-        if((boardArray[finalX][finalY] == null)||((boardArray[finalX][finalY] != null)
-                && boardArray[finalX][finalY].player.playerColor != piece.player.playerColor))
-        {
-            return true;
-        }
-
-        return false;
+    protected boolean isValidEndPoint(Piece piece, int finalX, int finalY) {
+        return (boardArray[finalX][finalY] == null) || ((boardArray[finalX][finalY] != null)
+                && boardArray[finalX][finalY].player.playerColor != piece.player.playerColor);
     }
 
     /**
@@ -252,18 +199,15 @@ public class Board {
      * @param finalY the final Y location
      * @return a boolean indicating whether a capture will occur
      */
-    public boolean isCapture(Piece piece, int finalX, int finalY)
-    {
-
-        if(boardArray[finalX][finalY]!= null && boardArray[finalX][finalY].player != piece.player)
-        {
-            if(boardArray[finalX][finalY].getType() == Type.KING)
+    public boolean isCapture(Piece piece, int finalX, int finalY) {
+        if(boardArray[finalX][finalY]!= null && boardArray[finalX][finalY].player != piece.player) {
+            if(boardArray[finalX][finalY].getType() == Type.KING) {
                 boardArray[finalX][finalY].player.isLoser = true;
+            }
             return true;
-        }
-
-        else
+        } else {
             return false;
+        }
     }
 
     /**
@@ -273,17 +217,14 @@ public class Board {
      * @param finalX the final X location
      * @param finalY the final Y location
      */
-    public void setNewPieceLocation(Piece piece, int finalX, int finalY)
-    {
+    public void setNewPieceLocation(Piece piece, int finalX, int finalY) {
         int originX = piece.x;
         int originY = piece.y;
 
-        piece.x = finalX; //set piece's new location
+        piece.x = finalX; // set piece's new location
         piece.y = finalY;
 
-        boardArray[finalX][finalY] = piece; //set array to new piece's position
-        boardArray[originX][originY] = null; //set starting point to empty
+        boardArray[finalX][finalY] = piece; // set array to new piece's position
+        boardArray[originX][originY] = null; // set starting point to empty
     }
-
-
 }
