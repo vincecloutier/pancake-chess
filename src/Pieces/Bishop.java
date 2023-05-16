@@ -1,15 +1,8 @@
 package Pieces;
 
 import Game.Player;
-import Game.Type;
 
-
-/**
- * Created by Anne on 9/11/2014.
- */
 public class Bishop extends Piece {
-
-    Type type;
 
     /**
      * The constructor for a Bishop.
@@ -17,16 +10,7 @@ public class Bishop extends Piece {
      * @param y the Bishop's y coordinate
      * @param player the Bishop's associated player
      */
-    public Bishop(int x, int y, Player player) {
-        super(x, y, player);
-        type = Type.BISHOP;
-    }
-
-    /**
-     * A function that gets the Piece type.
-     * @return  an integer indicating the Piece type
-     */
-    public Type getType() {return Type.BISHOP;}
+    public Bishop(int x, int y, Player player) {super(x, y, player);}
 
     /**
      * A function that determines whether the Bishop is moving diagonally.

@@ -1,13 +1,7 @@
 package Pieces;
-
 import Game.Player;
-import Game.Type;
-/**
- * Created by Anne on 9/11/2014.
- */
-public class Rook extends Piece {
 
-    Type type;
+public class Rook extends Piece {
 
     /**
      * The constructor for a Rook.
@@ -15,19 +9,7 @@ public class Rook extends Piece {
      * @param y the Rook's Y location
      * @param player the Rook's associated player
      */
-    public Rook(int x, int y, Player player) {
-        super(x, y, player);
-        type = Type.ROOK;
-    }
-
-    /**
-     * A function that gets the Piece type.
-     * @return  an integer indicating the Piece type
-     */
-    public Type getType()
-    {
-        return Type.ROOK;
-    }
+    public Rook(int x, int y, Player player) {super(x, y, player);}
 
     /**
      * A function that determines whether the Rook is moving horizontally or vertically.

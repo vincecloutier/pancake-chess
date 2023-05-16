@@ -9,7 +9,7 @@ import java.util.Vector;
 public class Board {
 
     public Piece[][] boardArray;
-    public Game game; //Boards can access information about players, pieces and turns.
+    public Game game; // Boards can access information about players, pieces and turns.
     public Vector<Piece> whitePieces = new Vector<Piece>(16);
     public Vector<Piece> blackPieces = new Vector<Piece>(16);
 
@@ -121,7 +121,7 @@ public class Board {
      * @return  a boolean indicating if there is invalid leaping
      */
     protected boolean validLeaping(Piece piece, int[][] movePath) {
-        if(piece.getType() == Type.KNIGHT)
+        if(piece instanceof Knight)
             return true;
 
         int pairs = movePath[0].length;
@@ -165,7 +165,7 @@ public class Board {
      */
     public boolean isCapture(Piece piece, int finalX, int finalY) {
         if(boardArray[finalX][finalY]!= null && boardArray[finalX][finalY].player != piece.player) {
-            if(boardArray[finalX][finalY].getType() == Type.KING) {
+            if(boardArray[finalX][finalY] instanceof King) {
                 boardArray[finalX][finalY].player.isLoser = true;
             }
             return true;

@@ -1,13 +1,7 @@
 package Pieces;
-
 import Game.Player;
-import Game.Type;
-/**
- * Created by Anne on 9/11/2014.
- */
-public class Knight extends Piece {
 
-   Type type;
+public class Knight extends Piece {
 
     /**
      * The constructor for a Knight.
@@ -15,19 +9,7 @@ public class Knight extends Piece {
      * @param y the Knight's Y location
      * @param player the Knight's associated player
      */
-    public Knight(int x, int y, Player player) {
-        super(x, y, player);
-        type = Type.KNIGHT;
-    }
-
-    /**
-     * A function that gets the Piece type.
-     * @return  an integer indicating the Piece type
-     */
-    public Type getType()
-    {
-        return Type.KNIGHT;
-    }
+    public Knight(int x, int y, Player player) {super(x, y, player);}
 
     /**
      * A function that determines whether the Knight is moving in an "L" path.

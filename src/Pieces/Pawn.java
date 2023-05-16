@@ -1,11 +1,7 @@
 package Pieces;
-
 import Game.Player;
-import Game.Type;
 
 public class Pawn extends Piece {
-
-    Type type;
 
     /**
      * The constructor for a Pawn.
@@ -13,19 +9,7 @@ public class Pawn extends Piece {
      * @param y the Pawn's Y location
      * @param player the Pawn's associated player
      */
-    public Pawn (int x, int y, Player player) {
-        super(x, y, player);
-        type = Type.PAWN;
-    }
-
-    /**
-     * A function that gets the Piece type.
-     * @return  an integer indicating the Piece type
-     */
-    public Type getType()
-    {
-        return Type.PAWN;
-    }
+    public Pawn (int x, int y, Player player) {super(x, y, player);}
 
     /**
      * A function that determines whether the Pancake is trying to capture or not.
