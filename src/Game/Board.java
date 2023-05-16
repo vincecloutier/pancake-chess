@@ -55,7 +55,7 @@ public class Board {
     }
 
     /**
-     * Places PLayer 1's pieces on the board. (WHITE)
+     * Places Player 1's pieces on the board. (WHITE)
      */
     public void setPlayer1Pieces() {
         Piece[][] board = this.boardArray;
