@@ -5,28 +5,28 @@ import Game.Type;
 
 
 /**
- * Created by Anne on 9/11/2014.
+ * Created by Vincent on 5/11/2022.
  */
-public class Bishop extends Piece {
+public class Pancake extends Piece {
 
     Type type;
 
     /**
-     * The constructor for a Bishop.
-     * @param x the Bishop's x coordinate
-     * @param y the Bishop's y coordinate
-     * @param player the Bishop's associated player
+     * The constructor for a Pancake.
+     * @param x the Pancake's x coordinate
+     * @param y the Pancake's y coordinate
+     * @param player the Pancake's associated player
      */
-    public Bishop(int x, int y, Player player) {
+    public Pancake(int x, int y, Player player) {
         super(x, y, player);
-        type = Type.BISHOP;
+        type = Type.PANCAKE;
     }
 
     /**
      * A function that gets the Piece type.
      * @return  an integer indicating the Piece type
      */
-    public Type getType() {return Type.BISHOP;}
+    public Type getType() {return Type.PANCAKE;}
 
     /**
      * A function that determines whether the Bishop is moving diagonally.
@@ -50,8 +50,7 @@ public class Bishop extends Piece {
      * @param finalY the final Y location
      * @return an array of coordinates of the given path
      */
-    public int [][] drawPath(int startX, int startY, int finalX, int finalY)
-    {
+    public int [][] drawPath(int startX, int startY, int finalX, int finalY) {
         int pairs = Math.abs(finalX - startX); //length of path
 
         int x_dir = 1, y_dir = 1; //determining direction
