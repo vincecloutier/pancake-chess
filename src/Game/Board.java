@@ -119,7 +119,6 @@ public class Board {
             {
                 game.capture = true;
                 boardArray[finalX][finalY] = null;
-                if(piece.getType() == Type.ZERGLING) zergRush(piece, finalX, finalY);
             }
 
             setNewPieceLocation(piece, finalX, finalY);
@@ -141,20 +140,7 @@ public class Board {
         return;
     }
 
-    /**
-     * A function to handle Zerglings.
-     * @param piece
-     * @param finalX
-     * @param finalY
-     */
-    public void zergRush(Piece piece, int finalX, int finalY)
-    {
-        boardArray[piece.x][piece.y] = null;
-        boardArray[piece.x][piece.y] = new Zergling(piece.x, piece.y, piece.player);
-        piece.x = finalX;
-        piece.y = finalY;
-        boardArray[finalX][finalY] = piece;
-    }
+
 
     /**
      * A function that determines whether a move is valid for any piece based on the following: 1) the move is within
