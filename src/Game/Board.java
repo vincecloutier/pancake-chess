@@ -94,7 +94,7 @@ public class Board {
         // TODO: Make it so that pieces can't move if the king is in check
         int [][] path = piece.drawPath(piece.x, piece.y, finalX, finalY);
         return isWithinBounds(finalX, finalY)
-                && (validLeaping(piece, path))
+                && (isValidLeaping(piece, path))
                 && (isNotOrigin(piece, finalX, finalY))
                 && (isValidEndPoint(piece, finalX, finalY));
     }
@@ -115,7 +115,7 @@ public class Board {
      * @param movePath the path of the piece, not including origin or endpoint
      * @return  a boolean indicating if there is invalid leaping
      */
-    protected boolean validLeaping(Piece piece, int[][] movePath) {
+    protected boolean isValidLeaping(Piece piece, int[][] movePath) {
         if(piece instanceof Knight)
             return true;
 

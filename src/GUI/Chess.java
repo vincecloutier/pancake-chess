@@ -4,9 +4,6 @@ import Game.Game;
 
 import javax.swing.*;
 
-/**
- * Created by Anne on 9/26/2014.
- */
 public class Chess {
 
     public void gameLoop() {
