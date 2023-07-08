@@ -5,10 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="simplified pieces">
-      <change afterPath="$PROJECT_DIR$/src/AI/AlphaBetaChess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AI/Rating.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AI/UserInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Game/ChessGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Game/Position.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AI/AlphaBetaChess.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AI/ChessPieces.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AI/Rating.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AI/UserInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Chess.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/ChessBoardGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/ChessBoardGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Board.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Game.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pieces/Pancake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Pawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pieces/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces/Piece.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
