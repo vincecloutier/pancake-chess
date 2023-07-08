@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="626884a9-308c-430f-8657-5749d11506c2" name="Changes" comment="simplified pieces">
+      <change afterPath="$PROJECT_DIR$/src/AI/AlphaBetaChess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AI/Rating.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AI/UserInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +98,8 @@
       <workItem from="1684251502787" duration="27000" />
       <workItem from="1684251532454" duration="1000" />
       <workItem from="1684277890502" duration="1040000" />
+      <workItem from="1688845082749" duration="64000" />
+      <workItem from="1688845729125" duration="513000" />
     </task>
     <task id="LOCAL-00009" summary="consolidated classes">
       <created>1682172311405</created>
