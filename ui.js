@@ -139,19 +139,6 @@ Chess.UI.prototype.updatePieces = function() {
 Chess.UI.prototype.updateMoves = function() {
 	var moves = this.chessPosition.getMoves();
 
-	$("#moves").html(
-		'<a href="#" id="undo" class="' + (this.chessPosition.canUndo() ? "can" : "cannot") + '">undo</a><br/>' +
-		'<a href="#" id="auto" class="' + ((moves.length > 0) ? "can" : "cannot") + '">auto</a><br/>' +
-		moves.map(
-			/**
-			 * @param {!Chess.Move} move
-			 * @param {number} index
-			 * @return {string}
-			 */
-			function(move, index) {
-				return '<a href="#" id="' + index + '">' + move.getString() + "</a><br/>";
-			}).join(""));
-
 	$(Chess.UI.CHESSBOARD_PIECES_AND_SQUARES).removeClass("can-move");
 	moves.forEach(/** @param {!Chess.Move} move */ function(move) {
 		var td = $("#" + Chess.getAlgebraicFromIndex(move.getFrom()));
@@ -225,17 +212,6 @@ Chess.UI.prototype.updateMoves = function() {
 		}
 	});
 
-	$("#moves a").click(function() {
-		var id = $(this).attr("id");
-		if (id === "undo") {
-			ui.chessPosition.unmakeMove(); // (black) move
-			ui.chessPosition.unmakeMove(); // (white) move
-			ui.updateChessPosition();
-		} else {
-			ui.chessPosition.makeMove(moves[parseInt(id, 10)]);
-			ui.updateChessPosition();
-		}
-	});
 };
 
 /**
@@ -251,10 +227,21 @@ Chess.UI.prototype.updateChessPosition = function() {
 	$("#dim").css({"display": "none"});
 
 	if (status === Chess.Position.Status.CHECKMATE) {
-		$("#moves").append("&#35;<br/>" + (this.chessPosition.getTurnColor() ? "1-0" : "0-1"));
+		var winner = (this.chessPosition.getTurnColor() === Chess.PieceColor.WHITE) ? 'Black' : 'White';
+		if (confirm(winner + ' wins. Checkmate! Do you want to restart the game?')) {
+			this.reset();
+		}
 	} else if (status !== Chess.Position.Status.NORMAL) {
-		$("#moves").append("&frac12;-&frac12;");
+		if (confirm('The game is a draw. Do you want to restart the game?')) {
+			this.reset();
+		}
 	}
+};
+
+Chess.UI.prototype.reset = function() {
+	// Reset the chess position to the initial state
+	this.chessPosition = new Chess.Position();
+	this.updateChessPosition();
 };
 
 /**
