@@ -1,29 +1,16 @@
 body {
     width: 960px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     text-align: left;
     font-size: 12pt;
     font-family: Arial, sans-serif;
     color: black;
-    background: #303030 repeat fixed url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAFUlEQVQImWNgYGD4D8UMDEgMFIH/AGu7Bfvz8g82AAAAAElFTkSuQmCC");
+    /* background: #303030; */
 }
 
 h1 {
     text-transform: lowercase;
-    letter-spacing: 0.5ex;
-    font-weight: bold;
-    font-size: 100%;
-    background: white;
-    margin: 0;
-    padding: 14px;
-    border-top-left-radius: 14px;
-    border-top-right-radius: 14px;
-}
-
-#content {
-    background: white;
-    padding: 14px 40px;
+    text-align: center;
 }
 
 #help {
@@ -45,11 +32,12 @@ h1 {
 #chessboard {
     width: 700px;
     height: 700px;
-    float: left;
-    padding: 0;
+    margin: 0 auto;
+    /* background-color: gray; */
+    /* border-radius: 14px; */
 }
 
-#moves {
+/* #moves {
     border: 1px solid silver;
     border-radius: 14px;
     width: 138px;
@@ -62,7 +50,7 @@ h1 {
 
 #moves button {
     width: 100%;
-}
+} */
 
 #clear {
     clear: both;
@@ -70,18 +58,17 @@ h1 {
     height: 0;
 }
 
-#footer {
+/* #footer {
     background: white;
     margin: 0;
     padding: 14px;
     border-bottom-left-radius: 14px;
     border-bottom-right-radius: 14px;
-}
+} */
 
 #chessboard table {
     border-spacing: 0;
     border-collapse: collapse;
-    border: none;
     cursor: default;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -99,7 +86,6 @@ h1 {
 }
 
 #chessboard table tr th {
-    background: silver;
     font-size: small;
     font-weight: normal;
 }
@@ -136,65 +122,43 @@ h1 {
 }
 
 #chessboard table tr td.light {
-    background: #E0E0E0;
-    background: -moz-linear-gradient(-45deg, #ffffff 0%, #c0c0c0 100%);
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #ffffff), color-stop(100%, #c0c0c0));
-    background: -webkit-linear-gradient(-45deg, #ffffff 0%, #c0c0c0 100%);
-    background: -o-linear-gradient(-45deg, #ffffff 0%, #c0c0c0 100%);
-    background: -ms-linear-gradient(-45deg, #ffffff 0%, #c0c0c0 100%);
-    background: linear-gradient(135deg, white, silver);
+    background: lightgrey;
 }
 
 #chessboard table tr td.dark {
-    background: #404040;
-    background: -moz-linear-gradient(-45deg, #808080 0%, #000000 100%);
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #808080), color-stop(100%, #000000));
-    background: -webkit-linear-gradient(-45deg, #808080 0%, #000000 100%);
-    background: -o-linear-gradient(-45deg, #808080 0%, #000000 100%);
-    background: -ms-linear-gradient(-45deg, #808080 0%, #000000 100%);
-    background: linear-gradient(135deg, gray, black);
+    background: darkgrey;
 }
 
 #chessboard table tr td div {
     font-size: 50px;
 }
 
-#chessboard table tr td.white {
-    color: white;
+/* #chessboard table tr td.white {
+    color: black;
 }
 
 #chessboard table tr td.black {
     color: black;
-}
+} */
 
-#chessboard table tr td.from {
+/* #chessboard table tr td.from {
     font-weight: bold;
-}
+} */
 
-#chessboard table tr td.to {
+/* #chessboard table tr td.to {
     box-shadow: inset 0 0 10px 1px green;
-}
+} */
 
-#chessboard table tr td.to.capture {
+#chessboard table tr td.to.capture, 
+#chessboard table tr td.to.en-passant:after {
     box-shadow: inset 0 0 10px 1px red;
 }
 
+#chessboard table tr td.to.positional:after, 
+#chessboard table tr td.to.double-push:after, 
+#chessboard table tr td.to.queen-castle:after, 
+#chessboard table tr td.to.king-castle:after, 
 #chessboard table tr td.to.en-passant:after {
-    color: red;
-    content: "e.p.";
-}
-
-#chessboard table tr td.to.king-castle:after {
-    color: magenta;
-    content: "0-0";
-}
-
-#chessboard table tr td.to.queen-castle:after {
-    color: magenta;
-    content: "0-0-0";
-}
-
-#chessboard table tr td.to.positional:after, #chessboard table tr td.to.double-push:after {
     color: gray;
     content: "\2022";
 }
@@ -207,11 +171,11 @@ h1 {
     cursor: not-allowed;
 }
 
-#chessboard table tr td.last-move {
+/* #chessboard table tr td.last-move {
     box-shadow: inset 0 0 10px 1px yellow;
-}
+} */
 
-#moves a {
+/* #moves a {
     color: gray;
     font-size: 8pt;
     text-decoration: none;
@@ -221,4 +185,4 @@ h1 {
     color: silver;
     pointer-events: none;
     cursor: default;
-}
+} */
