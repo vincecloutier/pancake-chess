@@ -3,13 +3,13 @@
 	<head>
 		<meta http-equiv="x-ua-compatible" content="IE=edge">
 		<meta charset="utf-8">
-		<title>Choosy-Chess</title>
+		<title>pancake-chess</title>
 		<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css">
 		<link rel="stylesheet" href="chess.css">
-		<link rel="shortcut icon" href="chess.ico">
+		<link rel="shortcut icon" href="assets/icon.png">
 	</head>
 	<body>
-		<h1>Choosy-Chess</h1>
+		<h1>pancake-chess</h1>
 		<div id="content">
 			<div id="chessboard" role="main"></div>
 			<div id="clear"></div>
@@ -18,11 +18,11 @@
 		<script src="https://code.jquery.com/ui/1.10.0/jquery-ui.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.2/jquery.ui.touch-punch.min.js"></script>
 		<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/augment.js/1.0.0/augment.min.js"></script><![endif]-->
-		<script src="chess.js"></script>
-		<script src="bitboard.js"></script>
-		<script src="zobrist.js"></script>
-		<script src="move.js"></script>
-		<script src="position.js"></script>
+		<script src="logic/chess.js"></script>
+		<script src="logic/bitboard.js"></script>
+		<script src="logic/zobrist.js"></script>
+		<script src="logic/move.js"></script>
+		<script src="logic/position.js"></script>
 		<script src="ui.js"></script>
 		<script>
 			$(makeChessGame);

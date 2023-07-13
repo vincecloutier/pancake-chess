@@ -244,9 +244,6 @@ Chess.UI.prototype.reset = function() {
 	this.updateChessPosition();
 };
 
-/**
- * Creates a new chessboard and sets up the game at the standard chess initial position.
- */
 function makeChessGame() {
 	Chess.UI.makeBoard();
 	var ui = new Chess.UI;

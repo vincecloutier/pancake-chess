@@ -81,7 +81,7 @@ Chess.PIECE_ALGEBRAIC_NAMES = " NBRQK";
  * @type {string}
  * @see http://goo.gl/OHlAI
  */
-Chess.PIECE_CHARACTERS = "\u2659\u265F\u2658\u265E\u2657\u265D\u2656\u265C\u2655\u265B\u2654\u265A";
+Chess.PIECE_CHARACTERS = "\u26C1\u26C3\u2658\u265E\u2657\u265D\u2656\u265C\u2655\u265B\u2654\u265A";
 
 /**
  * @param {number} index 0-63
