@@ -76,10 +76,6 @@ Chess.Position = function() {
 	 * @type {!Array.<!Chess.Zobrist>}
 	 */
 	 this.hashHistory = [];
-
-	// TODO: checking pieces?
-	// TODO: separate occupied squares bitboard?
-	// TODO: store kings as indices instead of bitboards?
 };
 
 /**
@@ -280,7 +276,6 @@ Chess.Position.makePawnAttackMask = function(color, pawns) {
  * @param {number} rankDirection
  * @param {number} fileDirection
  * @return {!Chess.Bitboard}
- * TODO: Kogge-Stone: http://chessprogramming.wikispaces.com/Kogge-Stone+Algorithm
  */
 Chess.Position.makeSlidingAttackMask = function(fromBB, occupied, rankDirection, fileDirection) {
 	var bb = Chess.Bitboard.makeZero();
@@ -322,7 +317,6 @@ Chess.Position.makeRookAttackMask = function(fromBB, occupied) {
  * @param {!Chess.PieceColor} color attacked by color
  * @param {number} index
  * @return {boolean}
- * @see http://goo.gl/UYzOw (Square Attacked By)
  */
 Chess.Position.prototype.isAttacked = function(color, index) {
 	var pawns = this.getPieceColorBitboard(Chess.Piece.PAWN, color);
@@ -398,7 +392,6 @@ Chess.Position.prototype.clearCastlingRight = function(color, kingSide) {
  * @param {boolean} kingSide true = castle kingside, false = castle queenside
  * @param {boolean} onlyLegal true = check that king's route is not attacked
  * @return {boolean}
- * TODO: allow pseudo-legal castle moves, i.e. don't check attacked until makeMove
  */
 Chess.Position.prototype.canCastle = function(color, kingSide, onlyLegal) {
 	if (!this.hasCastlingRight(color, kingSide)) {
@@ -426,7 +419,7 @@ Chess.Position.prototype.canCastle = function(color, kingSide, onlyLegal) {
 
 /**
  * @param {!Chess.PieceColor} color
- * @param {boolean} kingSide true = castle kingside, false = castle queenside
+ * @param {boolean} kingSide 
  * @return {boolean}
  */
 Chess.Position.prototype.isCastlingLegal = function(color, kingSide) {
@@ -468,7 +461,6 @@ Chess.Position.prototype.isThreefoldRepetitionRuleDraw = function() {
 
 /**
  * @return {boolean}
- * TODO: find a good source for how this is supposed to work
  */
 Chess.Position.prototype.isInsufficientMaterialDraw = function() {
 	if (!this.getPieceBitboard(Chess.Piece.PAWN).isEmpty()) {
@@ -534,7 +526,6 @@ Chess.Position.prototype.getStatus = function() {
 /**
  * @param {boolean} onlyCaptures
  * @return {!Array.<!Chess.Move>} pseudo-legal moves in this chess position
- * TODO: special-case move generation when king is check
  */
 Chess.Position.prototype.generateMoves = function(onlyCaptures) {
 	var moves = [];
