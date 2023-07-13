@@ -10,6 +10,4 @@ include("bitboard.js");
 include("zobrist.js");
 include("move.js");
 include("position.js");
-include("parser.js");
-include("ai.js");
 include("ui.js");
